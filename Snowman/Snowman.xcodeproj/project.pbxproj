@@ -1,0 +1,711 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		55D202E91F298463003B4308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D202E81F298463003B4308 /* AppDelegate.swift */; };
+		55D202EB1F298463003B4308 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D202EA1F298463003B4308 /* ViewController.swift */; };
+		55D202EE1F298463003B4308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D202EC1F298463003B4308 /* Main.storyboard */; };
+		55D202F01F298463003B4308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D202EF1F298463003B4308 /* Assets.xcassets */; };
+		55D202F31F298463003B4308 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D202F11F298463003B4308 /* LaunchScreen.storyboard */; };
+		55D202F81F298463003B4308 /* Snowman WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 55D202F71F298463003B4308 /* Snowman WatchKit App.app */; };
+		55D202FE1F298463003B4308 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D202FC1F298463003B4308 /* Interface.storyboard */; };
+		55D203001F298463003B4308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D202FF1F298463003B4308 /* Assets.xcassets */; };
+		55D203071F298463003B4308 /* Snowman WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 55D203061F298463003B4308 /* Snowman WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		55D2030E1F298463003B4308 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2030D1F298463003B4308 /* ExtensionDelegate.swift */; };
+		55D203101F298463003B4308 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2030F1F298463003B4308 /* ComplicationController.swift */; };
+		55D203121F298463003B4308 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55D203111F298463003B4308 /* Assets.xcassets */; };
+		55D203251F2984DA003B4308 /* GameModeInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D203211F2984D9003B4308 /* GameModeInterfaceController.swift */; };
+		55D203261F2984DA003B4308 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D203221F2984D9003B4308 /* Game.swift */; };
+		55D203271F2984DA003B4308 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D203231F2984D9003B4308 /* GameManager.swift */; };
+		55D203281F2984DA003B4308 /* GameInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D203241F2984D9003B4308 /* GameInterfaceController.swift */; };
+		55D203501F29A1D4003B4308 /* KerasLetterRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D203491F29A1C9003B4308 /* KerasLetterRecognizer.swift */; };
+		55D203511F29A1D5003B4308 /* KerasLetterRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D203491F29A1C9003B4308 /* KerasLetterRecognizer.swift */; };
+		55D203521F29A1D8003B4308 /* LetterRecognizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034A1F29A1C9003B4308 /* LetterRecognizing.swift */; };
+		55D203531F29A1D9003B4308 /* LetterRecognizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034A1F29A1C9003B4308 /* LetterRecognizing.swift */; };
+		55D203541F29A1EC003B4308 /* LetterDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034E1F29A1C9003B4308 /* LetterDrawing.swift */; };
+		55D203551F29A1ED003B4308 /* LetterDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034E1F29A1C9003B4308 /* LetterDrawing.swift */; };
+		55D203561F29A1F1003B4308 /* LetterImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034F1F29A1C9003B4308 /* LetterImageDrawing.swift */; };
+		55D203571F29A1F2003B4308 /* LetterImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034F1F29A1C9003B4308 /* LetterImageDrawing.swift */; };
+		55EC21BC1F29A28F004C1C74 /* letters_keras.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034C1F29A1C9003B4308 /* letters_keras.mlmodel */; };
+		55EC21BD1F29A290004C1C74 /* letters_keras.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034C1F29A1C9003B4308 /* letters_keras.mlmodel */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55D202F91F298463003B4308 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55D202DD1F298463003B4308 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55D202F61F298463003B4308;
+			remoteInfo = "Snowman WatchKit App";
+		};
+		55D203081F298463003B4308 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 55D202DD1F298463003B4308 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55D203051F298463003B4308;
+			remoteInfo = "Snowman WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		55D203191F298463003B4308 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				55D203071F298463003B4308 /* Snowman WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D2031D1F298463003B4308 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				55D202F81F298463003B4308 /* Snowman WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		55D202E51F298463003B4308 /* Snowman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowman.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D202E81F298463003B4308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		55D202EA1F298463003B4308 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55D202ED1F298463003B4308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		55D202EF1F298463003B4308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55D202F21F298463003B4308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		55D202F41F298463003B4308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D202F71F298463003B4308 /* Snowman WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Snowman WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D202FD1F298463003B4308 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		55D202FF1F298463003B4308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55D203011F298463003B4308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D203061F298463003B4308 /* Snowman WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Snowman WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		55D2030D1F298463003B4308 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		55D2030F1F298463003B4308 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		55D203111F298463003B4308 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55D203131F298463003B4308 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55D203211F2984D9003B4308 /* GameModeInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModeInterfaceController.swift; sourceTree = "<group>"; };
+		55D203221F2984D9003B4308 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		55D203231F2984D9003B4308 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		55D203241F2984D9003B4308 /* GameInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInterfaceController.swift; sourceTree = "<group>"; };
+		55D203491F29A1C9003B4308 /* KerasLetterRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerasLetterRecognizer.swift; sourceTree = "<group>"; };
+		55D2034A1F29A1C9003B4308 /* LetterRecognizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterRecognizing.swift; sourceTree = "<group>"; };
+		55D2034C1F29A1C9003B4308 /* letters_keras.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = letters_keras.mlmodel; sourceTree = "<group>"; };
+		55D2034E1F29A1C9003B4308 /* LetterDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterDrawing.swift; sourceTree = "<group>"; };
+		55D2034F1F29A1C9003B4308 /* LetterImageDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterImageDrawing.swift; sourceTree = "<group>"; };
+		55D2035A1F29A213003B4308 /* BinaryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryReader.swift; sourceTree = "<group>"; };
+		55D2035B1F29A213003B4308 /* CSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
+		55D2035C1F29A213003B4308 /* CSVError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVError.swift; sourceTree = "<group>"; };
+		55D2035D1F29A213003B4308 /* CSVReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
+		55D2035E1F29A213003B4308 /* CSVWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVWriter.swift; sourceTree = "<group>"; };
+		55D2035F1F29A213003B4308 /* Endian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endian.swift; sourceTree = "<group>"; };
+		55D203601F29A213003B4308 /* UnicodeIterator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnicodeIterator.swift; sourceTree = "<group>"; };
+		55D203621F29A21A003B4308 /* fruits_and_veggies.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = fruits_and_veggies.txt; sourceTree = "<group>"; };
+		55D203631F29A21A003B4308 /* mostcommon_4.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = mostcommon_4.csv; sourceTree = "<group>"; };
+		55D203641F29A21A003B4308 /* potter.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = potter.txt; sourceTree = "<group>"; };
+		55D203651F29A21A003B4308 /* shakespeare.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = shakespeare.txt; sourceTree = "<group>"; };
+		55D203661F29A21A003B4308 /* spellingbee.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = spellingbee.txt; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		55D202E21F298463003B4308 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D203031F298463003B4308 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		55D202DC1F298463003B4308 = {
+			isa = PBXGroup;
+			children = (
+				55D2034D1F29A1C9003B4308 /* Drawing */,
+				55D203481F29A1C9003B4308 /* Machine Learning */,
+				55D202E71F298463003B4308 /* Snowman */,
+				55D202FB1F298463003B4308 /* Snowman WatchKit App */,
+				55D2030A1F298463003B4308 /* Snowman WatchKit Extension */,
+				55D202E61F298463003B4308 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		55D202E61F298463003B4308 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				55D202E51F298463003B4308 /* Snowman.app */,
+				55D202F71F298463003B4308 /* Snowman WatchKit App.app */,
+				55D203061F298463003B4308 /* Snowman WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55D202E71F298463003B4308 /* Snowman */ = {
+			isa = PBXGroup;
+			children = (
+				55D202E81F298463003B4308 /* AppDelegate.swift */,
+				55D202EA1F298463003B4308 /* ViewController.swift */,
+				55D202EC1F298463003B4308 /* Main.storyboard */,
+				55D202EF1F298463003B4308 /* Assets.xcassets */,
+				55D202F11F298463003B4308 /* LaunchScreen.storyboard */,
+				55D202F41F298463003B4308 /* Info.plist */,
+			);
+			path = Snowman;
+			sourceTree = "<group>";
+		};
+		55D202FB1F298463003B4308 /* Snowman WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				55D202FC1F298463003B4308 /* Interface.storyboard */,
+				55D202FF1F298463003B4308 /* Assets.xcassets */,
+				55D203011F298463003B4308 /* Info.plist */,
+			);
+			path = "Snowman WatchKit App";
+			sourceTree = "<group>";
+		};
+		55D2030A1F298463003B4308 /* Snowman WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				55D2030F1F298463003B4308 /* ComplicationController.swift */,
+				55D2030D1F298463003B4308 /* ExtensionDelegate.swift */,
+				55D203221F2984D9003B4308 /* Game.swift */,
+				55D203241F2984D9003B4308 /* GameInterfaceController.swift */,
+				55D203231F2984D9003B4308 /* GameManager.swift */,
+				55D203211F2984D9003B4308 /* GameModeInterfaceController.swift */,
+				55D203131F298463003B4308 /* Info.plist */,
+				55D203111F298463003B4308 /* Assets.xcassets */,
+				55D203581F29A213003B4308 /* Frameworks */,
+				55D203611F29A21A003B4308 /* Modes */,
+			);
+			path = "Snowman WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		55D203481F29A1C9003B4308 /* Machine Learning */ = {
+			isa = PBXGroup;
+			children = (
+				55D2034B1F29A1C9003B4308 /* Models */,
+				55D2034A1F29A1C9003B4308 /* LetterRecognizing.swift */,
+				55D203491F29A1C9003B4308 /* KerasLetterRecognizer.swift */,
+			);
+			path = "Machine Learning";
+			sourceTree = "<group>";
+		};
+		55D2034B1F29A1C9003B4308 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55D2034C1F29A1C9003B4308 /* letters_keras.mlmodel */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		55D2034D1F29A1C9003B4308 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				55D2034E1F29A1C9003B4308 /* LetterDrawing.swift */,
+				55D2034F1F29A1C9003B4308 /* LetterImageDrawing.swift */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		55D203581F29A213003B4308 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				55D203591F29A213003B4308 /* CSV */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		55D203591F29A213003B4308 /* CSV */ = {
+			isa = PBXGroup;
+			children = (
+				55D2035A1F29A213003B4308 /* BinaryReader.swift */,
+				55D2035B1F29A213003B4308 /* CSV.swift */,
+				55D2035C1F29A213003B4308 /* CSVError.swift */,
+				55D2035D1F29A213003B4308 /* CSVReader.swift */,
+				55D2035E1F29A213003B4308 /* CSVWriter.swift */,
+				55D2035F1F29A213003B4308 /* Endian.swift */,
+				55D203601F29A213003B4308 /* UnicodeIterator.swift */,
+			);
+			path = CSV;
+			sourceTree = "<group>";
+		};
+		55D203611F29A21A003B4308 /* Modes */ = {
+			isa = PBXGroup;
+			children = (
+				55D203621F29A21A003B4308 /* fruits_and_veggies.txt */,
+				55D203631F29A21A003B4308 /* mostcommon_4.csv */,
+				55D203641F29A21A003B4308 /* potter.txt */,
+				55D203651F29A21A003B4308 /* shakespeare.txt */,
+				55D203661F29A21A003B4308 /* spellingbee.txt */,
+			);
+			path = Modes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		55D202E41F298463003B4308 /* Snowman */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55D2031E1F298463003B4308 /* Build configuration list for PBXNativeTarget "Snowman" */;
+			buildPhases = (
+				55D202E11F298463003B4308 /* Sources */,
+				55D202E21F298463003B4308 /* Frameworks */,
+				55D202E31F298463003B4308 /* Resources */,
+				55D2031D1F298463003B4308 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55D202FA1F298463003B4308 /* PBXTargetDependency */,
+			);
+			name = Snowman;
+			productName = Snowman;
+			productReference = 55D202E51F298463003B4308 /* Snowman.app */;
+			productType = "com.apple.product-type.application";
+		};
+		55D202F61F298463003B4308 /* Snowman WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55D2031A1F298463003B4308 /* Build configuration list for PBXNativeTarget "Snowman WatchKit App" */;
+			buildPhases = (
+				55D202F51F298463003B4308 /* Resources */,
+				55D203191F298463003B4308 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55D203091F298463003B4308 /* PBXTargetDependency */,
+			);
+			name = "Snowman WatchKit App";
+			productName = "Snowman WatchKit App";
+			productReference = 55D202F71F298463003B4308 /* Snowman WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		55D203051F298463003B4308 /* Snowman WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55D203161F298463003B4308 /* Build configuration list for PBXNativeTarget "Snowman WatchKit Extension" */;
+			buildPhases = (
+				55D203021F298463003B4308 /* Sources */,
+				55D203031F298463003B4308 /* Frameworks */,
+				55D203041F298463003B4308 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Snowman WatchKit Extension";
+			productName = "Snowman WatchKit Extension";
+			productReference = 55D203061F298463003B4308 /* Snowman WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		55D202DD1F298463003B4308 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Conrad Stoll";
+				TargetAttributes = {
+					55D202E41F298463003B4308 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					55D202F61F298463003B4308 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					55D203051F298463003B4308 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = 55D202E01F298463003B4308 /* Build configuration list for PBXProject "Snowman" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 55D202DC1F298463003B4308;
+			productRefGroup = 55D202E61F298463003B4308 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				55D202E41F298463003B4308 /* Snowman */,
+				55D202F61F298463003B4308 /* Snowman WatchKit App */,
+				55D203051F298463003B4308 /* Snowman WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		55D202E31F298463003B4308 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D202F31F298463003B4308 /* LaunchScreen.storyboard in Resources */,
+				55D202F01F298463003B4308 /* Assets.xcassets in Resources */,
+				55D202EE1F298463003B4308 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D202F51F298463003B4308 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D203001F298463003B4308 /* Assets.xcassets in Resources */,
+				55D202FE1F298463003B4308 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D203041F298463003B4308 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D203121F298463003B4308 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		55D202E11F298463003B4308 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55D203541F29A1EC003B4308 /* LetterDrawing.swift in Sources */,
+				55D202EB1F298463003B4308 /* ViewController.swift in Sources */,
+				55D203521F29A1D8003B4308 /* LetterRecognizing.swift in Sources */,
+				55D202E91F298463003B4308 /* AppDelegate.swift in Sources */,
+				55D203561F29A1F1003B4308 /* LetterImageDrawing.swift in Sources */,
+				55D203511F29A1D5003B4308 /* KerasLetterRecognizer.swift in Sources */,
+				55EC21BD1F29A290004C1C74 /* letters_keras.mlmodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55D203021F298463003B4308 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55EC21BC1F29A28F004C1C74 /* letters_keras.mlmodel in Sources */,
+				55D203531F29A1D9003B4308 /* LetterRecognizing.swift in Sources */,
+				55D203571F29A1F2003B4308 /* LetterImageDrawing.swift in Sources */,
+				55D203251F2984DA003B4308 /* GameModeInterfaceController.swift in Sources */,
+				55D203271F2984DA003B4308 /* GameManager.swift in Sources */,
+				55D203551F29A1ED003B4308 /* LetterDrawing.swift in Sources */,
+				55D203261F2984DA003B4308 /* Game.swift in Sources */,
+				55D2030E1F298463003B4308 /* ExtensionDelegate.swift in Sources */,
+				55D203501F29A1D4003B4308 /* KerasLetterRecognizer.swift in Sources */,
+				55D203281F2984DA003B4308 /* GameInterfaceController.swift in Sources */,
+				55D203101F298463003B4308 /* ComplicationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55D202FA1F298463003B4308 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55D202F61F298463003B4308 /* Snowman WatchKit App */;
+			targetProxy = 55D202F91F298463003B4308 /* PBXContainerItemProxy */;
+		};
+		55D203091F298463003B4308 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55D203051F298463003B4308 /* Snowman WatchKit Extension */;
+			targetProxy = 55D203081F298463003B4308 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		55D202EC1F298463003B4308 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55D202ED1F298463003B4308 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		55D202F11F298463003B4308 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55D202F21F298463003B4308 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		55D202FC1F298463003B4308 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55D202FD1F298463003B4308 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		55D203141F298463003B4308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		55D203151F298463003B4308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		55D203171F298463003B4308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = GX7CGWUZDA;
+				INFOPLIST_FILE = "Snowman WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conradstoll.Snowman.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		55D203181F298463003B4308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = GX7CGWUZDA;
+				INFOPLIST_FILE = "Snowman WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conradstoll.Snowman.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		55D2031B1F298463003B4308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GX7CGWUZDA;
+				IBSC_MODULE = Snowman_WatchKit_Extension;
+				INFOPLIST_FILE = "Snowman WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conradstoll.Snowman.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Debug;
+		};
+		55D2031C1F298463003B4308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GX7CGWUZDA;
+				IBSC_MODULE = Snowman_WatchKit_Extension;
+				INFOPLIST_FILE = "Snowman WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conradstoll.Snowman.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
+			};
+			name = Release;
+		};
+		55D2031F1F298463003B4308 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GX7CGWUZDA;
+				INFOPLIST_FILE = Snowman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conradstoll.Snowman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55D203201F298463003B4308 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = GX7CGWUZDA;
+				INFOPLIST_FILE = Snowman/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.conradstoll.Snowman;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		55D202E01F298463003B4308 /* Build configuration list for PBXProject "Snowman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D203141F298463003B4308 /* Debug */,
+				55D203151F298463003B4308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55D203161F298463003B4308 /* Build configuration list for PBXNativeTarget "Snowman WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D203171F298463003B4308 /* Debug */,
+				55D203181F298463003B4308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55D2031A1F298463003B4308 /* Build configuration list for PBXNativeTarget "Snowman WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D2031B1F298463003B4308 /* Debug */,
+				55D2031C1F298463003B4308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55D2031E1F298463003B4308 /* Build configuration list for PBXNativeTarget "Snowman" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55D2031F1F298463003B4308 /* Debug */,
+				55D203201F298463003B4308 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 55D202DD1F298463003B4308 /* Project object */;
+}

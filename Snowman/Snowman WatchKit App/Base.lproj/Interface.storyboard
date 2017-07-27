@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13168.3" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dDL-Tu-zFX">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13042.2"/>
+    </dependencies>
+    <scenes>
+        <!--Game Types-->
+        <scene sceneID="Kab-bN-K38">
+            <objects>
+                <controller identifier="GameModeInterfaceController" title="Game Types" id="dDL-Tu-zFX" customClass="GameModeInterfaceController" customModule="Snowman_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="MkJ-Ok-3VG">
+                            <items>
+                                <tableRow identifier="GameModeRowController" id="dQf-cs-ZcO" customClass="GameModeRowController" customModule="Snowman_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="60" alignment="left" id="fCa-6z-dFU">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Harry Potter" numberOfLines="0" id="tkC-o0-bnn"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="modeLabel" destination="tkC-o0-bnn" id="2Jb-AA-wQz"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="MkJ-Ok-3VG" id="mEZ-ig-pmQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="212" y="604"/>
+        </scene>
+        <!--Game-->
+        <scene sceneID="Cqe-oh-cTp">
+            <objects>
+                <controller identifier="GameInterfaceController" title="Game" id="Yqe-nX-Yag" customClass="GameInterfaceController" customModule="Snowman_WatchKit_Extension">
+                    <items>
+                        <group width="154" height="174" alignment="center" layout="overlap" spacing="0.0" id="F09-q9-dh2">
+                            <items>
+                                <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="0.0" id="tB5-xD-arG">
+                                    <items>
+                                        <group width="1" height="0.5" alignment="center" layout="overlap" spacing="0.0" id="0o0-Gs-OUf" userLabel="Progress Group">
+                                            <items>
+                                                <group width="1" height="1" alignment="left" layout="overlap" spacing="0.0" id="fI4-5X-MdK">
+                                                    <items>
+                                                        <imageView width="70" height="70" alignment="center" verticalAlignment="bottom" image="snowman" id="Bna-C9-XvO"/>
+                                                        <label alignment="left" text="DGI" id="I2U-lK-KD8">
+                                                            <color key="textColor" red="0.88179572610000001" green="0.0" blue="0.05425080644" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                                <group width="1" height="1" alignment="left" hidden="YES" layout="vertical" id="vrl-sk-Amk">
+                                                    <items>
+                                                        <button width="1" height="65" alignment="left" verticalAlignment="bottom" title="Play Again" id="VMf-rb-bNb">
+                                                            <connections>
+                                                                <action selector="didTapPlayAgain" destination="Yqe-nX-Yag" id="Q76-Jm-d9u"/>
+                                                            </connections>
+                                                        </button>
+                                                    </items>
+                                                </group>
+                                            </items>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </group>
+                                        <group width="1" height="0.5" alignment="left" verticalAlignment="bottom" id="Xho-gu-VUB" userLabel="Phrase Group">
+                                            <items>
+                                                <label alignment="center" verticalAlignment="center" text="______ ___ ______" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.59999999999999998" id="99u-UW-lI7">
+                                                    <fontDescription key="font" type="system" pointSize="24"/>
+                                                </label>
+                                            </items>
+                                        </group>
+                                    </items>
+                                </group>
+                                <group width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" layout="overlap" spacing="0.0" id="blO-xh-YFS">
+                                    <items>
+                                        <group width="1" height="1" alignment="left" alpha="0.0" id="d73-QT-40V">
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </group>
+                                        <spriteKitScene width="1" height="1" alignment="left" id="uqb-Du-xSF"/>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </group>
+                                <group width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" layout="vertical" id="hpE-Lx-gw0">
+                                    <items>
+                                        <button width="1" height="0.25" alignment="center" verticalAlignment="bottom" title="Redraw" id="1Vv-57-tis">
+                                            <color key="backgroundColor" red="0.88179572610000001" green="0.0" blue="0.05425080644" alpha="0.74897742150000002" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="20"/>
+                                            <connections>
+                                                <action selector="didTapRetry" destination="Yqe-nX-Yag" id="D2P-wJ-B9k"/>
+                                            </connections>
+                                        </button>
+                                        <group width="1" height="0.75" alignment="left" layout="vertical" id="BmI-qo-e74">
+                                            <items>
+                                                <button width="1" height="1" alignment="right" title="D" id="Xgh-nc-S26">
+                                                    <color key="backgroundColor" white="0.12132109789999999" alpha="0.75359947640000002" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="font" type="system" pointSize="48"/>
+                                                    <connections>
+                                                        <action selector="didTapFirstConfirm" destination="Yqe-nX-Yag" id="vkQ-tn-RPo"/>
+                                                    </connections>
+                                                </button>
+                                                <button width="1" height="0.5" alignment="left" title="G" id="IRd-bU-J4G">
+                                                    <color key="backgroundColor" white="0.12130042990000001" alpha="0.75359947640000002" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="font" type="system" pointSize="48"/>
+                                                    <connections>
+                                                        <action selector="didTapSecondConfirm" destination="Yqe-nX-Yag" id="Jyd-DD-Oy0"/>
+                                                    </connections>
+                                                </button>
+                                            </items>
+                                            <variation key="default">
+                                                <mask key="items">
+                                                    <exclude reference="IRd-bU-J4G"/>
+                                                </mask>
+                                            </variation>
+                                        </group>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="0.75345631540000002" colorSpace="calibratedWhite"/>
+                                </group>
+                                <group width="1" height="1" alignment="left" hidden="YES" id="rPs-O3-y8z">
+                                    <items>
+                                        <label alignment="center" verticalAlignment="center" text="Start drawing anywhere to guess a letter." textAlignment="center" numberOfLines="0" id="TZO-rR-NHb"/>
+                                    </items>
+                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </group>
+                            </items>
+                            <gestureRecognizers>
+                                <panGestureRecognizer id="ZAV-IU-4bN">
+                                    <connections>
+                                        <action selector="didPanWithSender:" destination="Yqe-nX-Yag" id="QOf-5t-MwW"/>
+                                    </connections>
+                                </panGestureRecognizer>
+                                <tapGestureRecognizer id="PSZ-5i-ai8">
+                                    <connections>
+                                        <action selector="didTapWithSender:" destination="Yqe-nX-Yag" id="Aeq-I0-wmn"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                            <variation key="device=watch38mm" height="150" width="134"/>
+                        </group>
+                    </items>
+                    <menu key="menu" id="ZZ0-J3-h0G">
+                        <items>
+                            <menuItem title="Start Over" icon="repeat" id="XWB-Cb-dM8">
+                                <connections>
+                                    <action selector="didSelectStartOver" destination="Yqe-nX-Yag" id="p8c-q7-pxH"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="confirmGroup" destination="hpE-Lx-gw0" id="elE-2H-Bia"/>
+                        <outlet property="drawGroup" destination="blO-xh-YFS" id="6gA-6W-qat"/>
+                        <outlet property="drawScene" destination="uqb-Du-xSF" id="kin-kd-Pjx"/>
+                        <outlet property="drawingOverlayGroup" destination="d73-QT-40V" id="G9X-Oi-zwa"/>
+                        <outlet property="firstConfirmButton" destination="Xgh-nc-S26" id="spB-wZ-Sn1"/>
+                        <outlet property="gameGroup" destination="tB5-xD-arG" id="WKz-tU-dEf"/>
+                        <outlet property="guessingPhrase" destination="99u-UW-lI7" id="YtV-xE-Srj"/>
+                        <outlet property="introGroup" destination="rPs-O3-y8z" id="a4M-yV-fDz"/>
+                        <outlet property="mainGroup" destination="F09-q9-dh2" id="Jul-jo-g8M"/>
+                        <outlet property="missedGuesses" destination="I2U-lK-KD8" id="dpA-Lc-H79"/>
+                        <outlet property="playAgainGroup" destination="vrl-sk-Amk" id="jA3-V4-ZBN"/>
+                        <outlet property="retryButton" destination="1Vv-57-tis" id="tcY-S4-heD"/>
+                        <outlet property="secondConfirmButton" destination="IRd-bU-J4G" id="06s-Km-mEe"/>
+                        <outlet property="snowmanImage" destination="Bna-C9-XvO" id="poE-RD-GbQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="464.66666666666669" y="604.58974358974365"/>
+        </scene>
+    </scenes>
+</document>
