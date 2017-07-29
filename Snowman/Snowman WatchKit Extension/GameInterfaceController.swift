@@ -12,7 +12,10 @@ import WatchKit
 
 class GameInterfaceController: WKInterfaceController {
     
-    let recognizer : LetterRecognizing = KerasLetterRecognizer()
+    let recognizer : LetterRecognizing = KerasLetterRecognizer(KerasFullAlphabetModel)
+    
+    let firstHalfRecognizer : LetterRecognizing = KerasLetterRecognizer(KerasFirstHalfAlphabetModel)
+    let secondHalfRecognizer : LetterRecognizing = KerasLetterRecognizer(KerasSecondHalfAlphabetModel)
     
     @IBOutlet weak var mainGroup : WKInterfaceGroup!
     @IBOutlet weak var gameGroup : WKInterfaceGroup!
@@ -302,6 +305,18 @@ class GameInterfaceController: WKInterfaceController {
             firstConfirmButton.setTitle(firstLetter)
         }
         
+        if (LetterDrawingLoggingEnabled) {
+            let firstModelGuess = firstHalfRecognizer.recognizeLetter(for: currentDrawing)
+            let firstModelLetter = firstModelGuess.letter
+            let firstModelConfidence = firstModelGuess.confidence ?? 0.0
+            
+            let secondModelGuess = secondHalfRecognizer.recognizeLetter(for: currentDrawing)
+            let secondModelLetter = secondModelGuess.letter
+            let secondModelConfidence = secondModelGuess.confidence ?? 0.0
+            
+            print("First: " + firstModelLetter + " " + String(Int(firstModelConfidence)) + " Second: " + secondModelLetter + " " + String(Int(secondModelConfidence)) + " Full: " + firstLetter + " " + String(Int(prediction.confidence ?? 0.0)))
+        }
+
         configureUI(for: .confirm)
 
         drawing = nil

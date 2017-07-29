@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55242E211F2C23EC00F9ED6A /* letters_keras_half_1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E201F2C23DA00F9ED6A /* letters_keras_half_1.mlmodel */; };
+		55242E221F2C23ED00F9ED6A /* letters_keras_half_1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E201F2C23DA00F9ED6A /* letters_keras_half_1.mlmodel */; };
+		55242E241F2C27AA00F9ED6A /* letters_keras_half_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E231F2C269D00F9ED6A /* letters_keras_half_2.mlmodel */; };
+		55242E251F2C27AC00F9ED6A /* letters_keras_half_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E231F2C269D00F9ED6A /* letters_keras_half_2.mlmodel */; };
+		55242E271F2C27D200F9ED6A /* KerasModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55242E261F2C27D200F9ED6A /* KerasModels.swift */; };
+		55242E281F2C27D200F9ED6A /* KerasModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55242E261F2C27D200F9ED6A /* KerasModels.swift */; };
+		55242E2D1F2C362800F9ED6A /* letters_keras.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E2C1F2C362500F9ED6A /* letters_keras.mlmodel */; };
+		55242E2E1F2C362900F9ED6A /* letters_keras.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E2C1F2C362500F9ED6A /* letters_keras.mlmodel */; };
 		55D202E91F298463003B4308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D202E81F298463003B4308 /* AppDelegate.swift */; };
 		55D202EB1F298463003B4308 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D202EA1F298463003B4308 /* ViewController.swift */; };
 		55D202EE1F298463003B4308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D202EC1F298463003B4308 /* Main.storyboard */; };
@@ -31,8 +39,6 @@
 		55D203551F29A1ED003B4308 /* LetterDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034E1F29A1C9003B4308 /* LetterDrawing.swift */; };
 		55D203561F29A1F1003B4308 /* LetterImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034F1F29A1C9003B4308 /* LetterImageDrawing.swift */; };
 		55D203571F29A1F2003B4308 /* LetterImageDrawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034F1F29A1C9003B4308 /* LetterImageDrawing.swift */; };
-		55EC21BC1F29A28F004C1C74 /* letters_keras.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034C1F29A1C9003B4308 /* letters_keras.mlmodel */; };
-		55EC21BD1F29A290004C1C74 /* letters_keras.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55D2034C1F29A1C9003B4308 /* letters_keras.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +84,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		55242E201F2C23DA00F9ED6A /* letters_keras_half_1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = letters_keras_half_1.mlmodel; sourceTree = "<group>"; };
+		55242E231F2C269D00F9ED6A /* letters_keras_half_2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = letters_keras_half_2.mlmodel; sourceTree = "<group>"; };
+		55242E261F2C27D200F9ED6A /* KerasModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerasModels.swift; sourceTree = "<group>"; };
+		55242E2C1F2C362500F9ED6A /* letters_keras.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = letters_keras.mlmodel; sourceTree = "<group>"; };
 		55D202E51F298463003B4308 /* Snowman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D202E81F298463003B4308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55D202EA1F298463003B4308 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,7 +110,6 @@
 		55D203241F2984D9003B4308 /* GameInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInterfaceController.swift; sourceTree = "<group>"; };
 		55D203491F29A1C9003B4308 /* KerasLetterRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerasLetterRecognizer.swift; sourceTree = "<group>"; };
 		55D2034A1F29A1C9003B4308 /* LetterRecognizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterRecognizing.swift; sourceTree = "<group>"; };
-		55D2034C1F29A1C9003B4308 /* letters_keras.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = letters_keras.mlmodel; sourceTree = "<group>"; };
 		55D2034E1F29A1C9003B4308 /* LetterDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterDrawing.swift; sourceTree = "<group>"; };
 		55D2034F1F29A1C9003B4308 /* LetterImageDrawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterImageDrawing.swift; sourceTree = "<group>"; };
 		55D2035A1F29A213003B4308 /* BinaryReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryReader.swift; sourceTree = "<group>"; };
@@ -203,6 +212,7 @@
 				55D2034B1F29A1C9003B4308 /* Models */,
 				55D2034A1F29A1C9003B4308 /* LetterRecognizing.swift */,
 				55D203491F29A1C9003B4308 /* KerasLetterRecognizer.swift */,
+				55242E261F2C27D200F9ED6A /* KerasModels.swift */,
 			);
 			path = "Machine Learning";
 			sourceTree = "<group>";
@@ -210,7 +220,9 @@
 		55D2034B1F29A1C9003B4308 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				55D2034C1F29A1C9003B4308 /* letters_keras.mlmodel */,
+				55242E2C1F2C362500F9ED6A /* letters_keras.mlmodel */,
+				55242E201F2C23DA00F9ED6A /* letters_keras_half_1.mlmodel */,
+				55242E231F2C269D00F9ED6A /* letters_keras_half_2.mlmodel */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -391,12 +403,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				55D203541F29A1EC003B4308 /* LetterDrawing.swift in Sources */,
+				55242E2D1F2C362800F9ED6A /* letters_keras.mlmodel in Sources */,
 				55D202EB1F298463003B4308 /* ViewController.swift in Sources */,
 				55D203521F29A1D8003B4308 /* LetterRecognizing.swift in Sources */,
 				55D202E91F298463003B4308 /* AppDelegate.swift in Sources */,
 				55D203561F29A1F1003B4308 /* LetterImageDrawing.swift in Sources */,
+				55242E241F2C27AA00F9ED6A /* letters_keras_half_2.mlmodel in Sources */,
 				55D203511F29A1D5003B4308 /* KerasLetterRecognizer.swift in Sources */,
-				55EC21BD1F29A290004C1C74 /* letters_keras.mlmodel in Sources */,
+				55242E211F2C23EC00F9ED6A /* letters_keras_half_1.mlmodel in Sources */,
+				55242E271F2C27D200F9ED6A /* KerasModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55EC21BC1F29A28F004C1C74 /* letters_keras.mlmodel in Sources */,
+				55242E281F2C27D200F9ED6A /* KerasModels.swift in Sources */,
 				55D203531F29A1D9003B4308 /* LetterRecognizing.swift in Sources */,
 				55D203571F29A1F2003B4308 /* LetterImageDrawing.swift in Sources */,
 				55D203251F2984DA003B4308 /* GameModeInterfaceController.swift in Sources */,
@@ -412,9 +427,12 @@
 				55D203551F29A1ED003B4308 /* LetterDrawing.swift in Sources */,
 				55D203261F2984DA003B4308 /* Game.swift in Sources */,
 				55D2030E1F298463003B4308 /* ExtensionDelegate.swift in Sources */,
+				55242E251F2C27AC00F9ED6A /* letters_keras_half_2.mlmodel in Sources */,
 				55D203501F29A1D4003B4308 /* KerasLetterRecognizer.swift in Sources */,
 				55D203281F2984DA003B4308 /* GameInterfaceController.swift in Sources */,
+				55242E221F2C23ED00F9ED6A /* letters_keras_half_1.mlmodel in Sources */,
 				55D203101F298463003B4308 /* ComplicationController.swift in Sources */,
+				55242E2E1F2C362900F9ED6A /* letters_keras.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

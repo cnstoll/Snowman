@@ -9,9 +9,18 @@
 import CoreML
 import Foundation
 
+protocol KerasModel {
+    func predictionResult(from inputArray: MLMultiArray) throws -> MLMultiArray
+}
+
 class KerasLetterRecognizer : LetterRecognizing {
-    let model = letters_keras()
     
+    let model : KerasModel
+    
+    init(_ model : KerasModel) {
+        self.model = model
+    }
+
     func recognizeLetter(for drawing: LetterDrawing) -> LetterPrediction {
         let inputVector = drawing.generateImageVectorForAlphaChannel()
         
@@ -22,20 +31,19 @@ class KerasLetterRecognizer : LetterRecognizing {
                 multiArray[index] = number
             }
             
-            let prediction = try model.prediction(input1: multiArray)
-            let output = prediction.output1
-            
-            let letter = predictionResult(for: output)
+            let prediction = try model.predictionResult(from: multiArray)
+        
+            let letter = letterPrediction(from: prediction)
             
             return letter
         } catch {
             print(error)
         }
-
+        
         return LetterPrediction(letter: "", confidence: 0)
     }
     
-    fileprivate func predictionResult(for output : MLMultiArray) -> LetterPrediction {
+    fileprivate func letterPrediction(from output : MLMultiArray) -> LetterPrediction {
         var highestIndex = 0
         var highestValue = 0.0
         
@@ -54,5 +62,4 @@ class KerasLetterRecognizer : LetterRecognizing {
         
         return LetterPrediction(letter: letter, confidence: confidence)
     }
-
 }
