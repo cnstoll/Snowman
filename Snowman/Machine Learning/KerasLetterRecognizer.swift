@@ -21,7 +21,7 @@ class KerasLetterRecognizer : LetterRecognizing {
         self.model = model
     }
 
-    func recognizeLetter(for drawing: LetterDrawing) -> LetterPrediction {
+    func recognizeLetter(for drawing: LetterDrawing) -> [LetterPrediction] {
         let inputVector = drawing.generateImageVectorForAlphaChannel()
         
         do {
@@ -32,34 +32,36 @@ class KerasLetterRecognizer : LetterRecognizing {
             }
             
             let prediction = try model.predictionResult(from: multiArray)
-        
-            let letter = letterPrediction(from: prediction)
+
+            let predictions = letterPredictions(from: prediction)
             
-            return letter
+            return predictions
         } catch {
             print(error)
         }
         
-        return LetterPrediction(letter: "", confidence: 0)
+        return [LetterPrediction]()
     }
     
-    fileprivate func letterPrediction(from output : MLMultiArray) -> LetterPrediction {
-        var highestIndex = 0
-        var highestValue = 0.0
+    fileprivate func letterPredictions(from output : MLMultiArray) -> [LetterPrediction] {
+        var predictions = [LetterPrediction]()
         
         for i in 1..<output.count {
-            let firstValue = output[i]
+            let confidence = output[i].doubleValue
+            let letter = String(i).letter()
+            let prediction = LetterPrediction(letter: letter, confidence: confidence)
             
-            if firstValue.doubleValue > highestValue {
-                highestValue = firstValue.doubleValue
-                highestIndex = i
-            }
+            predictions.append(prediction)
         }
         
-        let characterIndex = String(highestIndex)
-        let letter = characterIndex.letter()
-        let confidence = highestValue * 100.0
+        let sortedPredictions = predictions.sorted { (p1, p2) -> Bool in
+            return p1.confidence > p2.confidence
+        }
         
-        return LetterPrediction(letter: letter, confidence: confidence)
+        let filteredPredictions = sortedPredictions.filter { (p) -> Bool in
+            return p.confidence > 0.05
+        }
+        
+        return filteredPredictions
     }
 }

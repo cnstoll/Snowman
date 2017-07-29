@@ -22,14 +22,22 @@ class GameInterfaceController: WKInterfaceController {
     @IBOutlet weak var drawGroup : WKInterfaceGroup!
     @IBOutlet weak var confirmGroup : WKInterfaceGroup!
     @IBOutlet weak var playAgainGroup : WKInterfaceGroup!
-    
+    @IBOutlet weak var phraseGroup : WKInterfaceGroup!
+
     @IBOutlet weak var introGroup : WKInterfaceGroup!
     var shownIntro = false
     
     @IBOutlet weak var snowmanImage : WKInterfaceImage!
+    @IBOutlet weak var youWon : WKInterfaceLabel!
+    @IBOutlet weak var youLost : WKInterfaceLabel!
+
     @IBOutlet weak var guessingPhrase : WKInterfaceLabel!
+    @IBOutlet weak var animationGuessingPhrase : WKInterfaceLabel!
+
     @IBOutlet weak var missedGuesses : WKInterfaceLabel!
-    
+    @IBOutlet weak var animationMissedGuesses : WKInterfaceLabel!
+
+    @IBOutlet weak var finalPhrase : WKInterfaceLabel!
     @IBOutlet weak var retryButton : WKInterfaceButton!
     
     @IBOutlet weak var firstConfirmButton : WKInterfaceButton!
@@ -38,12 +46,14 @@ class GameInterfaceController: WKInterfaceController {
     @IBOutlet weak var drawingOverlayGroup : WKInterfaceGroup!
     @IBOutlet weak var drawScene : WKInterfaceSKScene!
     
-    var firstLetter : String = ""
-    var secondLetter : String = ""
+    @IBOutlet weak var letterPicker : WKInterfacePicker!
     
+    var letterSelection : String = ""
+    var letterPredictions : [LetterPrediction]?
+
     var game = Game(word: "")
     var drawing : LetterDrawing?
-    var state : GameState = .game
+    var state : GameState = .game(animated: false, phraseAnimated: false)
     var lineNode : SKShapeNode?
     
     var confirmationTimer : Timer?
@@ -96,20 +106,67 @@ class GameInterfaceController: WKInterfaceController {
             DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 self.dismissIntro()
             }
-        case .game:
-            guessingPhrase.setAttributedText(game.guessingPhrase())
-            setTitle(game.gameProgress())
-            missedGuesses.setAttributedText(game.missedGuesses())
+        case .game(let animated, let phraseAnimated):
+            let latestPhrase = game.guessingPhrase()
+            let latestMissed = game.missedGuesses()
             
-            if game.over {
-                snowmanImage.setHidden(true)
-                playAgainGroup.setHidden(false)
+            if animated && !game.over {
+                animationMissedGuesses.setAlpha(0)
+                animationGuessingPhrase.setAlpha(0)
+                
+                animationMissedGuesses.setAttributedText(latestMissed)
+                animationGuessingPhrase.setAttributedText(latestPhrase)
+                
+                animate(withDuration: 0.5, animations: {
+                    if phraseAnimated {
+                        self.animationGuessingPhrase.setAlpha(1)
+                        self.guessingPhrase.setAlpha(0)
+                    } else {
+                        self.animationMissedGuesses.setAlpha(1)
+                        self.missedGuesses.setAlpha(0)
+                    }
+                })
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.7, execute: {
+                    self.missedGuesses.setAttributedText(latestMissed)
+                    self.guessingPhrase.setAttributedText(latestPhrase)
+                    self.missedGuesses.setAlpha(1)
+                    self.guessingPhrase.setAlpha(1)
+                    self.animationMissedGuesses.setAlpha(0)
+                    self.animationGuessingPhrase.setAlpha(0)
+                })
             } else {
-                snowmanImage.setHidden(false)
-                playAgainGroup.setHidden(true)
+                missedGuesses.setAttributedText(latestMissed)
+                guessingPhrase.setAttributedText(latestPhrase)
             }
             
-            snowmanImage.setImage(game.snowman())
+            setTitle(game.gameProgress())
+            finalPhrase.setAttributedText(latestPhrase)
+            
+            if game.over {
+                missedGuesses.setHidden(true)
+                playAgainGroup.setHidden(false)
+                phraseGroup.setHidden(true)
+            } else {
+                missedGuesses.setHidden(false)
+                playAgainGroup.setHidden(true)
+                phraseGroup.setHidden(false)
+            }
+            
+            if game.over && game.won {
+                youWon.setHidden(false)
+                youLost.setHidden(true)
+            } else if game.over && !game.won {
+                youWon.setHidden(true)
+                youLost.setHidden(false)
+            } else {
+                youWon.setHidden(true)
+                youLost.setHidden(true)
+            }
+            
+            animate(withDuration: 0.5, animations: {
+                self.snowmanImage.setImage(self.game.snowman())
+            })
             
             drawGroup.setBackgroundImage(nil)
             drawGroup.setHidden(true)
@@ -120,6 +177,8 @@ class GameInterfaceController: WKInterfaceController {
             
             lineNode?.removeFromParent()
             lineNode = nil
+            
+            letterPicker.resignFocus()
         case .draw:
             drawGroup.setHidden(false)
             confirmGroup.setHidden(true)
@@ -132,6 +191,8 @@ class GameInterfaceController: WKInterfaceController {
 //            self.animate(withDuration: 0.35, animations: {
 //                self.drawingOverlayGroup.setAlpha(0.65)
 //            })
+            
+            letterPicker.resignFocus()
         case .confirm:
             confirmGroup.setHidden(false)
             
@@ -145,16 +206,16 @@ class GameInterfaceController: WKInterfaceController {
     // MARK: Action Methods
     
     @IBAction func didTapRetry() {
-        state = .game
-        configureUI(for: .game)
+        state = .game(animated: false, phraseAnimated: false)
+        configureUI(for: .game(animated: false, phraseAnimated: false))
     }
     
     @IBAction func didTapFirstConfirm() {
-        updateGame(forGuessed: firstLetter)
+        updateGame(forGuessed: letterSelection)
     }
     
     @IBAction func didTapSecondConfirm() {
-        updateGame(forGuessed: secondLetter)
+        updateGame(forGuessed: letterSelection)
     }
     
     @IBAction func didTapPlayAgain() {
@@ -165,6 +226,15 @@ class GameInterfaceController: WKInterfaceController {
         GameManager.shared.playAgain()
     }
     
+    @IBAction func didChangePickerIndex(_ index : Int) {
+        if let predictions = letterPredictions {
+            let letter = predictions[index].letter
+            
+            self.firstConfirmButton.setTitle(letter)
+            self.letterSelection = letter
+        }
+    }
+    
     
     // MARK: Gesture Methods
     
@@ -173,7 +243,7 @@ class GameInterfaceController: WKInterfaceController {
             return
         }
         
-        guard state != .confirm else {
+        if case .confirm = state {
             return
         }
         
@@ -204,7 +274,7 @@ class GameInterfaceController: WKInterfaceController {
             return
         }
         
-        guard state != .confirm else {
+        if case .confirm = state {
             return
         }
         
@@ -295,26 +365,43 @@ class GameInterfaceController: WKInterfaceController {
         
         state = .confirm
         
-        let prediction = recognizer.recognizeLetter(for: currentDrawing)
-                
-        firstLetter = prediction.letter
-        
-        if (LetterDrawingLoggingEnabled) {
-            firstConfirmButton.setTitle(firstLetter + " " + String(prediction.confidence!) + "%")
-        } else {
-            firstConfirmButton.setTitle(firstLetter)
+        let predictions = recognizer.recognizeLetter(for: currentDrawing)
+        letterPredictions = predictions
+            
+        guard let prediction = predictions.first else {
+            return
         }
         
+        letterSelection = prediction.letter
+        
         if (LetterDrawingLoggingEnabled) {
-            let firstModelGuess = firstHalfRecognizer.recognizeLetter(for: currentDrawing)
+            firstConfirmButton.setTitle(prediction.letter + " " + String(prediction.confidence) + "%")
+        } else {
+            firstConfirmButton.setTitle(prediction.letter)
+        }
+        
+        var pickerItems = [WKPickerItem]()
+        
+        for item in predictions {
+            let pickerItem = WKPickerItem()
+            pickerItem.title = item.letter
+            pickerItems.append(pickerItem)
+        }
+        
+        self.letterPicker.setItems(pickerItems)
+        self.letterPicker.setSelectedItemIndex(0)
+        self.letterPicker.focus()
+
+        if (LetterDrawingLoggingEnabled) {
+            let firstModelGuess = firstHalfRecognizer.recognizeLetter(for: currentDrawing).first!
             let firstModelLetter = firstModelGuess.letter
-            let firstModelConfidence = firstModelGuess.confidence ?? 0.0
+            let firstModelConfidence = firstModelGuess.confidence
             
-            let secondModelGuess = secondHalfRecognizer.recognizeLetter(for: currentDrawing)
+            let secondModelGuess = secondHalfRecognizer.recognizeLetter(for: currentDrawing).first!
             let secondModelLetter = secondModelGuess.letter
-            let secondModelConfidence = secondModelGuess.confidence ?? 0.0
+            let secondModelConfidence = secondModelGuess.confidence
             
-            print("First: " + firstModelLetter + " " + String(Int(firstModelConfidence)) + " Second: " + secondModelLetter + " " + String(Int(secondModelConfidence)) + " Full: " + firstLetter + " " + String(Int(prediction.confidence ?? 0.0)))
+            print("First: " + firstModelLetter + " " + String(Int(firstModelConfidence)) + " Second: " + secondModelLetter + " " + String(Int(secondModelConfidence)) + " Full: " + letterSelection + " " + String(Int(prediction.confidence)))
         }
 
         configureUI(for: .confirm)
@@ -331,7 +418,7 @@ class GameInterfaceController: WKInterfaceController {
             WKInterfaceDevice.current().play(.failure)
         }
         
-        state = .game
-        configureUI(for: .game)
+        state = .game(animated: true, phraseAnimated: correct)
+        configureUI(for: .game(animated: true, phraseAnimated: correct))
     }
 }

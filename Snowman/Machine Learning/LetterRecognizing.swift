@@ -11,11 +11,11 @@ import Foundation
 
 struct LetterPrediction {
     let letter : String
-    let confidence : Double?
+    let confidence : Double
 }
 
 protocol LetterRecognizing {
-    func recognizeLetter(for drawing : LetterDrawing) -> LetterPrediction
+    func recognizeLetter(for drawing : LetterDrawing) -> [LetterPrediction]
 }
 
 let letterMapping = ["1" : "A",

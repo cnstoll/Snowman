@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13042.2"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SFMono-Regular.otf">
+            <string>SFMono-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Game Types-->
         <scene sceneID="Kab-bN-K38">
@@ -19,7 +24,9 @@
                                 <tableRow identifier="GameModeRowController" id="dQf-cs-ZcO" customClass="GameModeRowController" customModule="Snowman_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="60" alignment="left" id="fCa-6z-dFU">
                                         <items>
-                                            <label alignment="left" verticalAlignment="center" text="Harry Potter" numberOfLines="0" id="tkC-o0-bnn"/>
+                                            <label alignment="left" verticalAlignment="center" text="Harry Potter" textAlignment="left" numberOfLines="0" minimumScaleFactor="0.90000000000000002" id="tkC-o0-bnn">
+                                                <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="16"/>
+                                            </label>
                                         </items>
                                     </group>
                                     <connections>
@@ -49,30 +56,51 @@
                                             <items>
                                                 <group width="1" height="1" alignment="left" layout="overlap" spacing="0.0" id="fI4-5X-MdK">
                                                     <items>
-                                                        <imageView width="70" height="70" alignment="center" verticalAlignment="bottom" image="snowman" id="Bna-C9-XvO"/>
+                                                        <imageView width="125" height="86" alignment="center" verticalAlignment="bottom" image="snowman" contentMode="center" id="Bna-C9-XvO"/>
+                                                        <label alignment="left" hidden="YES" text="🎉" id="BMf-jM-xe8">
+                                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="20"/>
+                                                        </label>
+                                                        <label alignment="left" hidden="YES" text="😞" id="LTD-9K-Qh4">
+                                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="20"/>
+                                                        </label>
                                                         <label alignment="left" text="DGI" id="I2U-lK-KD8">
                                                             <color key="textColor" red="0.88179572610000001" green="0.0" blue="0.05425080644" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="16"/>
+                                                        </label>
+                                                        <label alignment="left" alpha="0.0" text="DGI" id="pH9-Ne-uST">
+                                                            <color key="textColor" red="0.88179572610000001" green="0.0" blue="0.05425080644" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="16"/>
+                                                        </label>
+                                                    </items>
+                                                </group>
+                                            </items>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </group>
+                                        <group width="1" height="0.5" alignment="left" layout="overlap" id="kju-Nc-r7f" userLabel="Phrase Container Group">
+                                            <items>
+                                                <group width="1" height="1" alignment="left" verticalAlignment="bottom" layout="overlap" id="Xho-gu-VUB" userLabel="Phrase Group">
+                                                    <items>
+                                                        <label alignment="center" verticalAlignment="center" text="______ ___ ______" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.59999999999999998" id="99u-UW-lI7">
+                                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="20"/>
+                                                        </label>
+                                                        <label alignment="center" verticalAlignment="center" alpha="0.0" text="______ ___ ______" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.59999999999999998" id="OoQ-MQ-MOn">
+                                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="20"/>
                                                         </label>
                                                     </items>
                                                 </group>
                                                 <group width="1" height="1" alignment="left" hidden="YES" layout="vertical" id="vrl-sk-Amk">
                                                     <items>
-                                                        <button width="1" height="65" alignment="left" verticalAlignment="bottom" title="Play Again" id="VMf-rb-bNb">
+                                                        <label width="1" height="0.5" alignment="center" verticalAlignment="center" text="______ ___ ______" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.59999999999999998" id="XtA-ig-zfk">
+                                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="14"/>
+                                                        </label>
+                                                        <button width="1" height="0.5" alignment="left" verticalAlignment="bottom" title="New Game" id="VMf-rb-bNb">
+                                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="16"/>
                                                             <connections>
                                                                 <action selector="didTapPlayAgain" destination="Yqe-nX-Yag" id="Q76-Jm-d9u"/>
                                                             </connections>
                                                         </button>
                                                     </items>
                                                 </group>
-                                            </items>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </group>
-                                        <group width="1" height="0.5" alignment="left" verticalAlignment="bottom" id="Xho-gu-VUB" userLabel="Phrase Group">
-                                            <items>
-                                                <label alignment="center" verticalAlignment="center" text="______ ___ ______" textAlignment="center" numberOfLines="0" minimumScaleFactor="0.59999999999999998" id="99u-UW-lI7">
-                                                    <fontDescription key="font" type="system" pointSize="24"/>
-                                                </label>
                                             </items>
                                         </group>
                                     </items>
@@ -86,27 +114,20 @@
                                     </items>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </group>
-                                <group width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" layout="vertical" id="hpE-Lx-gw0">
+                                <group width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" layout="vertical" spacing="2" id="hpE-Lx-gw0">
                                     <items>
-                                        <button width="1" height="0.25" alignment="center" verticalAlignment="bottom" title="Redraw" id="1Vv-57-tis">
-                                            <color key="backgroundColor" red="0.88179572610000001" green="0.0" blue="0.05425080644" alpha="0.74897742150000002" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="font" type="system" pointSize="20"/>
-                                            <connections>
-                                                <action selector="didTapRetry" destination="Yqe-nX-Yag" id="D2P-wJ-B9k"/>
-                                            </connections>
-                                        </button>
                                         <group width="1" height="0.75" alignment="left" layout="vertical" id="BmI-qo-e74">
                                             <items>
                                                 <button width="1" height="1" alignment="right" title="D" id="Xgh-nc-S26">
                                                     <color key="backgroundColor" white="0.12132109789999999" alpha="0.75359947640000002" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="font" type="system" pointSize="48"/>
+                                                    <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="64"/>
                                                     <connections>
                                                         <action selector="didTapFirstConfirm" destination="Yqe-nX-Yag" id="vkQ-tn-RPo"/>
                                                     </connections>
                                                 </button>
                                                 <button width="1" height="0.5" alignment="left" title="G" id="IRd-bU-J4G">
                                                     <color key="backgroundColor" white="0.12130042990000001" alpha="0.75359947640000002" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="font" type="system" pointSize="48"/>
+                                                    <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="48"/>
                                                     <connections>
                                                         <action selector="didTapSecondConfirm" destination="Yqe-nX-Yag" id="Jyd-DD-Oy0"/>
                                                     </connections>
@@ -118,12 +139,42 @@
                                                 </mask>
                                             </variation>
                                         </group>
+                                        <group width="1" height="0.25" alignment="left" verticalAlignment="bottom" spacing="2" id="zPk-jy-3R7">
+                                            <items>
+                                                <button width="0.59999999999999998" height="1" alignment="left" verticalAlignment="bottom" title="Redraw?" id="1Vv-57-tis">
+                                                    <color key="backgroundColor" red="0.88179572610000001" green="0.0" blue="0.05425080644" alpha="0.74897742150000002" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="14"/>
+                                                    <connections>
+                                                        <action selector="didTapRetry" destination="Yqe-nX-Yag" id="D2P-wJ-B9k"/>
+                                                    </connections>
+                                                </button>
+                                                <group width="0.40000000000000002" height="1" alignment="right" verticalAlignment="bottom" layout="overlap" spacing="0.0" id="qNd-mn-PbI">
+                                                    <items>
+                                                        <picker width="1" height="1" alignment="center" verticalAlignment="center" indicatorMode="shownWhileFocused" id="2Si-YC-Ign">
+                                                            <connections>
+                                                                <action selector="didChangePickerIndex:" destination="Yqe-nX-Yag" id="5WM-mt-mp1"/>
+                                                            </connections>
+                                                        </picker>
+                                                        <button width="1" height="1" alignment="right" verticalAlignment="bottom" id="6HU-uT-awG">
+                                                            <color key="backgroundColor" white="0.33333333333333331" alpha="0.35293275523560208" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="16"/>
+                                                            <connections>
+                                                                <action selector="didTapFirstConfirm" destination="Yqe-nX-Yag" id="BwC-nH-05k"/>
+                                                            </connections>
+                                                        </button>
+                                                    </items>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </group>
+                                            </items>
+                                        </group>
                                     </items>
                                     <color key="backgroundColor" white="0.0" alpha="0.75345631540000002" colorSpace="calibratedWhite"/>
                                 </group>
                                 <group width="1" height="1" alignment="left" hidden="YES" id="rPs-O3-y8z">
                                     <items>
-                                        <label alignment="center" verticalAlignment="center" text="Start drawing anywhere to guess a letter." textAlignment="center" numberOfLines="0" id="TZO-rR-NHb"/>
+                                        <label alignment="center" verticalAlignment="center" text="Start drawing anywhere to guess a letter." textAlignment="center" numberOfLines="0" id="TZO-rR-NHb">
+                                            <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="14"/>
+                                        </label>
                                     </items>
                                     <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </group>
@@ -153,24 +204,32 @@
                         </items>
                     </menu>
                     <connections>
+                        <outlet property="animationGuessingPhrase" destination="OoQ-MQ-MOn" id="1NV-wZ-8dI"/>
+                        <outlet property="animationMissedGuesses" destination="pH9-Ne-uST" id="7aN-r9-W6d"/>
                         <outlet property="confirmGroup" destination="hpE-Lx-gw0" id="elE-2H-Bia"/>
                         <outlet property="drawGroup" destination="blO-xh-YFS" id="6gA-6W-qat"/>
                         <outlet property="drawScene" destination="uqb-Du-xSF" id="kin-kd-Pjx"/>
                         <outlet property="drawingOverlayGroup" destination="d73-QT-40V" id="G9X-Oi-zwa"/>
+                        <outlet property="finalPhrase" destination="XtA-ig-zfk" id="wep-vf-a53"/>
                         <outlet property="firstConfirmButton" destination="Xgh-nc-S26" id="spB-wZ-Sn1"/>
                         <outlet property="gameGroup" destination="tB5-xD-arG" id="WKz-tU-dEf"/>
                         <outlet property="guessingPhrase" destination="99u-UW-lI7" id="YtV-xE-Srj"/>
                         <outlet property="introGroup" destination="rPs-O3-y8z" id="a4M-yV-fDz"/>
+                        <outlet property="letterPicker" destination="2Si-YC-Ign" id="0mo-Vb-vb1"/>
                         <outlet property="mainGroup" destination="F09-q9-dh2" id="Jul-jo-g8M"/>
                         <outlet property="missedGuesses" destination="I2U-lK-KD8" id="dpA-Lc-H79"/>
+                        <outlet property="phraseGroup" destination="Xho-gu-VUB" id="yvM-90-QuM"/>
                         <outlet property="playAgainGroup" destination="vrl-sk-Amk" id="jA3-V4-ZBN"/>
                         <outlet property="retryButton" destination="1Vv-57-tis" id="tcY-S4-heD"/>
                         <outlet property="secondConfirmButton" destination="IRd-bU-J4G" id="06s-Km-mEe"/>
                         <outlet property="snowmanImage" destination="Bna-C9-XvO" id="poE-RD-GbQ"/>
+                        <outlet property="youLost" destination="LTD-9K-Qh4" id="1sw-hr-dKQ"/>
+                        <outlet property="youWon" destination="BMf-jM-xe8" id="VLq-Fo-eh4"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="464.66666666666669" y="604.58974358974365"/>
+            <point key="canvasLocation" x="464" y="604"/>
         </scene>
     </scenes>
+    <color key="tintColor" red="0.95978468656539917" green="0.65036934614181519" blue="0.13712078332901001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

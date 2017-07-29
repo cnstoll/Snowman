@@ -11,7 +11,7 @@ import UIKit
 
 enum GameState {
     case intro
-    case game
+    case game(animated : Bool, phraseAnimated : Bool)
     case draw
     case confirm
 }
@@ -76,7 +76,10 @@ struct Game {
     
     func snowman() -> UIImage {
         if incorrect.count >= 6 {
-            return #imageLiteral(resourceName: "snowman")
+            let imageName = "snowman_6"
+            let image = UIImage(named: imageName)
+            
+            return image!
         }
         
         let incorrectCount = String(incorrect.count)
@@ -136,6 +139,10 @@ struct Game {
         if gameWon {
             over = true
             won = true
+        }
+        
+        if shouldRevealPhrase {
+            won = false
         }
         
         return kerningAttributed(for: phrase)
