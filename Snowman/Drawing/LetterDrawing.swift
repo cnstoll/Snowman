@@ -31,7 +31,7 @@ extension UIImage {
         for w in 0...Int(self.size.width) - 1 {
             for h in 0...Int(self.size.height) - 1 {
                 let point = CGPoint(x: w, y: h)
-                let alpha = getPixelColor(point: point)
+                let alpha = getPixelAlphaValue(at: point)
                 let number = NSNumber(value: Float(alpha))
                 
                 pixels.append(number)
@@ -88,7 +88,7 @@ extension UIImage {
         return nil
     }
     
-    func getPixelColor(point: CGPoint) -> CGFloat {
+    func getPixelAlphaValue(at point: CGPoint) -> CGFloat {
         guard let cgImage = cgImage, let pixelData = cgImage.dataProvider?.data else { return 0.0 }
         
         let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData)
