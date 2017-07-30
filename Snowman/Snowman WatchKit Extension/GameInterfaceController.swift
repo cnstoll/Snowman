@@ -397,7 +397,10 @@ class GameInterfaceController: WKInterfaceController {
         
         self.letterPicker.setItems(pickerItems)
         self.letterPicker.setSelectedItemIndex(0)
-        self.letterPicker.focus()
+        
+        if pickerItems.count > 1 {
+            self.letterPicker.focus()
+        }
 
         if (LetterDrawingLoggingEnabled) {
             let firstModelGuess = firstHalfRecognizer.recognizeLetter(for: currentDrawing).first!
