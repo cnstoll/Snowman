@@ -146,6 +146,7 @@ struct Game {
         }
         
         if shouldRevealPhrase {
+            over = true
             won = false
         }
         

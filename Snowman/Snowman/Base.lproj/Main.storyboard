@@ -23,12 +23,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snowman" translatesAutoresizingMaskIntoConstraints="NO" id="HdL-fu-bzo">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snowman" translatesAutoresizingMaskIntoConstraints="NO" id="HdL-fu-bzo">
                                 <rect key="frame" x="62" y="81" width="250" height="172"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="172" id="2t8-bc-fhk"/>
                                     <constraint firstAttribute="width" constant="250" id="Rim-Ke-y1a"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="t1m-lL-5bl" appends="YES" id="rNO-CL-Ijz"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v7c-zH-SAQ">
                                 <rect key="frame" x="37.5" y="304.5" width="300" height="225"/>
@@ -63,6 +67,7 @@ Watch to play.</string>
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="v7c-zH-SAQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.25" id="YEV-40-ZpF"/>
                             <constraint firstItem="v7c-zH-SAQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YnP-Sf-Eog"/>
@@ -76,8 +81,109 @@ Watch to play.</string>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="5" id="t1m-lL-5bl">
+                    <connections>
+                        <segue destination="84C-kM-ubg" kind="presentation" id="fzK-b6-ddA"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
+            <point key="canvasLocation" x="-126" y="-39"/>
+        </scene>
+        <!--CoreML Playground View Controller-->
+        <scene sceneID="kfD-xw-3RE">
+            <objects>
+                <viewController id="84C-kM-ubg" customClass="CoreMLPlaygroundViewController" customModule="Snowman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWO-si-PDq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qcQ-Iy-ISu">
+                                <rect key="frame" x="47" y="193" width="280" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeN-q4-1Da">
+                                <rect key="frame" x="47" y="193" width="280" height="280"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="280" id="1sX-Kq-azn"/>
+                                    <constraint firstAttribute="width" constant="280" id="Soq-hk-KKj"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="dvF-6d-Hxo"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="280" id="ftO-T9-gkX"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qAZ-EX-ckr" appends="YES" id="JmY-xI-vCh"/>
+                                </connections>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4Wu-aH-HxW">
+                                <rect key="frame" x="47" y="131" width="280" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="280" id="Da3-C8-MMD"/>
+                                    <constraint firstAttribute="height" constant="28" id="I3y-dI-1yr"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Keras"/>
+                                    <segment title="Keras2"/>
+                                    <segment title="PCA"/>
+                                    <segment title="PCA2"/>
+                                </segments>
+                                <connections>
+                                    <action selector="didChangeSegmentedControlWithSender:" destination="84C-kM-ubg" eventType="valueChanged" id="SQQ-Jr-2OR"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uPT-Uz-1zK">
+                                <rect key="frame" x="187" y="506" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lA9-Pq-p8K">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Upt-9z-KEi"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PwL-Jd-mrd"/>
+                                    <barButtonItem systemItem="stop" id="tBT-R5-GTb">
+                                        <connections>
+                                            <action selector="close" destination="84C-kM-ubg" id="CHs-h2-tD8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xeN-q4-1Da" firstAttribute="top" secondItem="4Wu-aH-HxW" secondAttribute="bottom" constant="34" id="5oi-Wg-Fgh"/>
+                            <constraint firstItem="uPT-Uz-1zK" firstAttribute="centerX" secondItem="vWO-si-PDq" secondAttribute="centerX" id="EVo-7p-nn9"/>
+                            <constraint firstItem="lA9-Pq-p8K" firstAttribute="top" secondItem="cwQ-0G-QCj" secondAttribute="top" id="EaW-db-x1l"/>
+                            <constraint firstItem="4Wu-aH-HxW" firstAttribute="centerX" secondItem="vWO-si-PDq" secondAttribute="centerX" id="Pij-YG-2P0"/>
+                            <constraint firstItem="xeN-q4-1Da" firstAttribute="centerY" secondItem="vWO-si-PDq" secondAttribute="centerY" id="Qzz-pz-4WZ"/>
+                            <constraint firstItem="uPT-Uz-1zK" firstAttribute="top" secondItem="xeN-q4-1Da" secondAttribute="bottom" constant="33" id="RjX-ey-Xkx"/>
+                            <constraint firstItem="qcQ-Iy-ISu" firstAttribute="centerY" secondItem="xeN-q4-1Da" secondAttribute="centerY" id="Zf3-Ao-qBn"/>
+                            <constraint firstItem="qcQ-Iy-ISu" firstAttribute="centerX" secondItem="xeN-q4-1Da" secondAttribute="centerX" id="am6-XK-3mD"/>
+                            <constraint firstItem="qcQ-Iy-ISu" firstAttribute="width" secondItem="xeN-q4-1Da" secondAttribute="width" id="dbL-TH-aM3"/>
+                            <constraint firstItem="qcQ-Iy-ISu" firstAttribute="height" secondItem="xeN-q4-1Da" secondAttribute="height" id="gq8-Kx-XhO"/>
+                            <constraint firstItem="lA9-Pq-p8K" firstAttribute="leading" secondItem="cwQ-0G-QCj" secondAttribute="leading" id="j70-u7-avi"/>
+                            <constraint firstItem="xeN-q4-1Da" firstAttribute="centerX" secondItem="vWO-si-PDq" secondAttribute="centerX" id="mmf-4R-Cw1"/>
+                            <constraint firstItem="lA9-Pq-p8K" firstAttribute="trailing" secondItem="cwQ-0G-QCj" secondAttribute="trailing" id="vEA-KQ-dQr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cwQ-0G-QCj"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="qcQ-Iy-ISu" id="5LE-nn-KlE"/>
+                        <outlet property="label" destination="uPT-Uz-1zK" id="opd-Wk-K7t"/>
+                        <outlet property="segmentedControl" destination="4Wu-aH-HxW" id="Oga-HG-gJf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pmz-AB-Y81" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="qAZ-EX-ckr">
+                    <connections>
+                        <action selector="didPanWithGesture:" destination="84C-kM-ubg" id="RAo-lr-jbF"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="757.60000000000002" y="-37.331334332833585"/>
         </scene>
     </scenes>
     <resources>
