@@ -22,6 +22,8 @@ struct Game {
     var allGuesses : Set<String> = Set<String>()
     var correct : Set<String> = Set<String>()
     var incorrect : Set<String> = Set<String>()
+    var missedGuesses : [String] = [String]()
+    
     var won : Bool = false
     var over : Bool = false
     
@@ -45,6 +47,12 @@ struct Game {
         return result
     }
     
+    func repeatedGuess(for letter : String) -> Bool {
+        let repeated = allGuesses.contains(letter)
+
+        return repeated
+    }
+    
     mutating func evaluate(_ letter : String) -> Bool {
         var correctGuess = false
         
@@ -56,6 +64,10 @@ struct Game {
         }
         
         if correctGuess == false {
+            if incorrect.contains(letter) == false {
+                missedGuesses.append(letter)
+            }
+            
             incorrect.insert(letter)
         } else {
             correct.insert(letter)
@@ -140,14 +152,14 @@ struct Game {
         return kerningAttributed(for: phrase)
     }
     
-    func missedGuesses() -> NSAttributedString {
-        let missed = incorrect.reduce("", {$0 + $1})
+    func missedLetters() -> NSAttributedString {
+        let missed = missedGuesses.reduce("", {$0 + $1})
         
         return kerningAttributed(for: missed)
     }
     
     func interfaceTitle(for letter : String) -> String {
-        let repeated = allGuesses.contains(letter)
+        let repeated = repeatedGuess(for: letter)
 
         if repeated {
             return "Duplicate"
@@ -157,13 +169,13 @@ struct Game {
     }
     
     func confirmButtonColor(for letter : String) -> UIColor {
-        let repeated = allGuesses.contains(letter)
+        let repeated = repeatedGuess(for: letter)
         
         if repeated {
             return UIColor.darkGray.withAlphaComponent(0.05)
         }
         
-        return UIColor.darkGray.withAlphaComponent(0.4)
+        return UIColor.darkGray.withAlphaComponent(0.5)
     }
     
     private func kerningAttributed(for string : String) -> NSAttributedString {

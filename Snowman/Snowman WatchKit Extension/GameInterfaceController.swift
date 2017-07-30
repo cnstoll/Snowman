@@ -108,7 +108,7 @@ class GameInterfaceController: WKInterfaceController {
             }
         case .game(let animated, let phraseAnimated):
             let latestPhrase = game.guessingPhrase()
-            let latestMissed = game.missedGuesses()
+            let latestMissed = game.missedLetters()
             
             if animated && !game.over {
                 animationMissedGuesses.setAlpha(0)
@@ -417,15 +417,16 @@ class GameInterfaceController: WKInterfaceController {
     }
     
     func updateGame(forGuessed letter: String) {
+        let repeated = game.repeatedGuess(for: letter)
         let correct = game.evaluate(letter)
         
         if correct {
             //WKInterfaceDevice.current().play(.success)
-        } else {
+        } else if !repeated {
             WKInterfaceDevice.current().play(.failure)
         }
         
-        state = .game(animated: true, phraseAnimated: correct)
-        configureUI(for: .game(animated: true, phraseAnimated: correct))
+        state = .game(animated: !repeated, phraseAnimated: correct)
+        configureUI(for: .game(animated: !repeated, phraseAnimated: correct))
     }
 }

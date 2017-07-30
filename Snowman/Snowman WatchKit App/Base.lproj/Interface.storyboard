@@ -64,11 +64,11 @@
                                                             <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="20"/>
                                                         </label>
                                                         <label alignment="left" text="DGI" id="I2U-lK-KD8">
-                                                            <color key="textColor" red="0.88179572610000001" green="0.0" blue="0.05425080644" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.85882352941176465" green="0.25490196078431371" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="16"/>
                                                         </label>
                                                         <label alignment="left" alpha="0.0" text="DGI" id="pH9-Ne-uST">
-                                                            <color key="textColor" red="0.88179572610000001" green="0.0" blue="0.05425080644" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="textColor" red="0.85882352941176465" green="0.25490196078431371" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="16"/>
                                                         </label>
                                                     </items>
@@ -114,7 +114,7 @@
                                     </items>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </group>
-                                <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="2" id="hpE-Lx-gw0">
+                                <group width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" layout="vertical" spacing="2" id="hpE-Lx-gw0">
                                     <items>
                                         <group width="1" height="0.69999999999999996" alignment="left" layout="vertical" id="BmI-qo-e74">
                                             <items>
@@ -130,8 +130,8 @@
                                         </group>
                                         <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" spacing="2" id="zPk-jy-3R7">
                                             <items>
-                                                <button width="0.5" height="1" alignment="left" verticalAlignment="bottom" title="Redraw" id="1Vv-57-tis">
-                                                    <color key="backgroundColor" red="0.79069122874550257" green="0.0" blue="0.05425080644" alpha="0.94578288615968598" colorSpace="calibratedRGB"/>
+                                                <button width="0.5" height="1" alignment="left" verticalAlignment="bottom" alpha="0.94999999999999996" title="Redraw" id="1Vv-57-tis">
+                                                    <color key="backgroundColor" red="0.85882352941176465" green="0.25490196078431371" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="14"/>
                                                     <connections>
                                                         <action selector="didTapRetry" destination="Yqe-nX-Yag" id="D2P-wJ-B9k"/>
@@ -221,5 +221,5 @@
             <point key="canvasLocation" x="464" y="604"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.95978468656539917" green="0.65036934614181519" blue="0.13712078332901001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+    <color key="tintColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

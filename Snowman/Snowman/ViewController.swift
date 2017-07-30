@@ -20,6 +20,11 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func didTapShareButton() {
+        let shareString = "Check out Snowman, the new game I'm playing on my Apple Watch\nhttps://itunes.apple.com/app/id1195676848"
+        
+        let activityViewController = UIActivityViewController(activityItems: [shareString], applicationActivities: [])
+        present(activityViewController, animated: true, completion: nil)
+    }
 }
 
