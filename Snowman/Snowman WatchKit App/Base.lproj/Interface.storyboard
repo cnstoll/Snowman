@@ -114,58 +114,48 @@
                                     </items>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </group>
-                                <group width="1" height="1" alignment="center" verticalAlignment="center" hidden="YES" layout="vertical" spacing="2" id="hpE-Lx-gw0">
+                                <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="2" id="hpE-Lx-gw0">
                                     <items>
-                                        <group width="1" height="0.75" alignment="left" layout="vertical" id="BmI-qo-e74">
+                                        <group width="1" height="0.69999999999999996" alignment="left" layout="vertical" id="BmI-qo-e74">
                                             <items>
                                                 <button width="1" height="1" alignment="right" title="D" id="Xgh-nc-S26">
-                                                    <color key="backgroundColor" white="0.12132109789999999" alpha="0.75359947640000002" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.12132109789999999" alpha="0.95373854708062833" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="64"/>
                                                     <connections>
                                                         <action selector="didTapFirstConfirm" destination="Yqe-nX-Yag" id="vkQ-tn-RPo"/>
                                                     </connections>
                                                 </button>
-                                                <button width="1" height="0.5" alignment="left" title="G" id="IRd-bU-J4G">
-                                                    <color key="backgroundColor" white="0.12130042990000001" alpha="0.75359947640000002" colorSpace="calibratedWhite"/>
-                                                    <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="48"/>
-                                                    <connections>
-                                                        <action selector="didTapSecondConfirm" destination="Yqe-nX-Yag" id="Jyd-DD-Oy0"/>
-                                                    </connections>
-                                                </button>
                                             </items>
-                                            <variation key="default">
-                                                <mask key="items">
-                                                    <exclude reference="IRd-bU-J4G"/>
-                                                </mask>
-                                            </variation>
                                         </group>
-                                        <group width="1" height="0.25" alignment="left" verticalAlignment="bottom" spacing="2" id="zPk-jy-3R7">
+                                        <group width="1" height="0.29999999999999999" alignment="left" verticalAlignment="bottom" spacing="2" id="zPk-jy-3R7">
                                             <items>
-                                                <button width="0.59999999999999998" height="1" alignment="left" verticalAlignment="bottom" title="Redraw?" id="1Vv-57-tis">
-                                                    <color key="backgroundColor" red="0.88179572610000001" green="0.0" blue="0.05425080644" alpha="0.74897742150000002" colorSpace="calibratedRGB"/>
+                                                <button width="0.5" height="1" alignment="left" verticalAlignment="bottom" title="Redraw" id="1Vv-57-tis">
+                                                    <color key="backgroundColor" red="0.79069122874550257" green="0.0" blue="0.05425080644" alpha="0.94578288615968598" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="14"/>
                                                     <connections>
                                                         <action selector="didTapRetry" destination="Yqe-nX-Yag" id="D2P-wJ-B9k"/>
                                                     </connections>
                                                 </button>
-                                                <group width="0.40000000000000002" height="1" alignment="right" verticalAlignment="bottom" layout="overlap" spacing="0.0" id="qNd-mn-PbI">
+                                                <group width="0.5" height="1" alignment="right" verticalAlignment="bottom" layout="overlap" radius="6" spacing="0.0" id="qNd-mn-PbI">
                                                     <items>
-                                                        <picker width="1" height="1" alignment="center" verticalAlignment="center" indicatorMode="shownWhileFocused" id="2Si-YC-Ign">
+                                                        <picker width="1" height="1" alignment="center" verticalAlignment="center" alpha="0.94999999999999996" indicatorMode="shownWhileFocused" id="2Si-YC-Ign">
                                                             <connections>
                                                                 <action selector="didChangePickerIndex:" destination="Yqe-nX-Yag" id="5WM-mt-mp1"/>
                                                             </connections>
                                                         </picker>
                                                         <button width="1" height="1" alignment="right" verticalAlignment="bottom" id="6HU-uT-awG">
-                                                            <color key="backgroundColor" white="0.33333333333333331" alpha="0.35293275523560208" colorSpace="calibratedWhite"/>
+                                                            <color key="backgroundColor" white="0.33333333333333331" alpha="0.5" colorSpace="calibratedWhite"/>
                                                             <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="16"/>
                                                             <connections>
                                                                 <action selector="didTapFirstConfirm" destination="Yqe-nX-Yag" id="BwC-nH-05k"/>
                                                             </connections>
                                                         </button>
                                                     </items>
-                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </group>
                                             </items>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </group>
                                     </items>
                                     <color key="backgroundColor" white="0.0" alpha="0.75345631540000002" colorSpace="calibratedWhite"/>
@@ -221,7 +211,7 @@
                         <outlet property="phraseGroup" destination="Xho-gu-VUB" id="yvM-90-QuM"/>
                         <outlet property="playAgainGroup" destination="vrl-sk-Amk" id="jA3-V4-ZBN"/>
                         <outlet property="retryButton" destination="1Vv-57-tis" id="tcY-S4-heD"/>
-                        <outlet property="secondConfirmButton" destination="IRd-bU-J4G" id="06s-Km-mEe"/>
+                        <outlet property="secondConfirmButton" destination="6HU-uT-awG" id="oG6-La-grn"/>
                         <outlet property="snowmanImage" destination="Bna-C9-XvO" id="poE-RD-GbQ"/>
                         <outlet property="youLost" destination="LTD-9K-Qh4" id="1sw-hr-dKQ"/>
                         <outlet property="youWon" destination="BMf-jM-xe8" id="VLq-Fo-eh4"/>

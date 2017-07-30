@@ -230,8 +230,11 @@ class GameInterfaceController: WKInterfaceController {
         if let predictions = letterPredictions {
             let letter = predictions[index].letter
             
-            self.firstConfirmButton.setTitle(letter)
-            self.letterSelection = letter
+            firstConfirmButton.setTitle(letter)
+            letterSelection = letter
+            
+            setTitle(game.interfaceTitle(for: letter))
+            secondConfirmButton.setBackgroundColor(game.confirmButtonColor(for: letter))
         }
     }
     
@@ -380,6 +383,10 @@ class GameInterfaceController: WKInterfaceController {
             firstConfirmButton.setTitle(prediction.letter)
         }
         
+        setTitle(game.interfaceTitle(for: prediction.letter))
+
+        secondConfirmButton.setBackgroundColor(game.confirmButtonColor(for: prediction.letter))
+        
         var pickerItems = [WKPickerItem]()
         
         for item in predictions {
@@ -403,7 +410,7 @@ class GameInterfaceController: WKInterfaceController {
             
             print("First: " + firstModelLetter + " " + String(Int(firstModelConfidence)) + " Second: " + secondModelLetter + " " + String(Int(secondModelConfidence)) + " Full: " + letterSelection + " " + String(Int(prediction.confidence)))
         }
-
+        
         configureUI(for: .confirm)
 
         drawing = nil

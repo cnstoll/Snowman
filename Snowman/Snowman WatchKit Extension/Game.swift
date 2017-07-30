@@ -19,8 +19,9 @@ enum GameState {
 struct Game {
     let word : String
     
-    var correct : [String] = [String]()
-    var incorrect : [String] = [String]()
+    var allGuesses : Set<String> = Set<String>()
+    var correct : Set<String> = Set<String>()
+    var incorrect : Set<String> = Set<String>()
     var won : Bool = false
     var over : Bool = false
     
@@ -55,21 +56,12 @@ struct Game {
         }
         
         if correctGuess == false {
-            var repeatGuess = false
-            
-            for oldGuess in incorrect {
-                if oldGuess == letter {
-                    repeatGuess = true
-                    break;
-                }
-            }
-            
-            if repeatGuess == false {
-                incorrect.append(letter)
-            }
+            incorrect.insert(letter)
         } else {
-            correct.append(letter)
+            correct.insert(letter)
         }
+        
+        allGuesses.insert(letter)
         
         return correctGuess
     }
@@ -152,6 +144,26 @@ struct Game {
         let missed = incorrect.reduce("", {$0 + $1})
         
         return kerningAttributed(for: missed)
+    }
+    
+    func interfaceTitle(for letter : String) -> String {
+        let repeated = allGuesses.contains(letter)
+
+        if repeated {
+            return "Duplicate"
+        }
+        
+        return "Confirm guess"
+    }
+    
+    func confirmButtonColor(for letter : String) -> UIColor {
+        let repeated = allGuesses.contains(letter)
+        
+        if repeated {
+            return UIColor.darkGray.withAlphaComponent(0.05)
+        }
+        
+        return UIColor.darkGray.withAlphaComponent(0.4)
     }
     
     private func kerningAttributed(for string : String) -> NSAttributedString {
