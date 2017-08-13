@@ -41,7 +41,7 @@ class GameInterfaceController: WKInterfaceController {
     @IBOutlet weak var secondConfirmButton : WKInterfaceButton!
     
     @IBOutlet weak var drawingOverlayGroup : WKInterfaceGroup!
-    @IBOutlet weak var drawScene : WKInterfaceSKScene!
+    @IBOutlet weak var drawScene : WKInterfaceSKScene?
     
     @IBOutlet weak var letterPicker : WKInterfacePicker!
     
@@ -329,7 +329,7 @@ class GameInterfaceController: WKInterfaceController {
         scene.addChild(line)
         scene.backgroundColor = UIColor.clear
         
-        drawScene.presentScene(scene)
+        drawScene?.presentScene(scene)
     }
     
     func startTrackingGesturesForDrawing() {
