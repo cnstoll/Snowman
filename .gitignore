@@ -67,3 +67,11 @@ fastlane/screenshots
 fastlane/test_output
 /Snowman/.DS_Store
 /.DS_Store
+.DS_Store
+Training/Scripts/.ipynb_checkpoints/
+/Training/Scripts/.ipynb_checkpoints/letters_svm-checkpoint.ipynb
+/Training/Scripts/.ipynb_checkpoints/letters_svm_half-checkpoint.ipynb
+/Training/Scripts/.ipynb_checkpoints/letters_pca-checkpoint.ipynb
+/Training/Scripts/.ipynb_checkpoints/letters_pca_half-checkpoint.ipynb
+/Training/Scripts/.ipynb_checkpoints/letters_keras-checkpoint.ipynb
+/Training/Scripts/.ipynb_checkpoints/letters_keras_half-checkpoint.ipynb
