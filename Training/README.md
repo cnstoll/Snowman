@@ -9,9 +9,9 @@ https://www.nist.gov/itl/iad/image-group/emnist-dataset
 - Download and Install Anaconda for Python 2.7 [here](https://www.continuum.io/downloads)
 - After installing Anaconda, install the following python tools
 
-pip install tensorflow==1.1.0
-pip install keras==2.0.4
-pip install -U coremltools
+> pip install tensorflow==1.1.0
+> pip install keras==2.0.4
+> pip install -U coremltools
 
 # Launch Jupyter Notebooks
 
