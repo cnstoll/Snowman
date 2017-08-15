@@ -17,3 +17,9 @@ Snowman was built to demonstrate using CoreML to build a game for watchOS 4. The
 ## Machine Learning
 
 - Snowman uses a handwriting recognition model trained on the Extended MNIST data set. For more information on training a handwriting recognition model, read the README and scripts located in the Training folder.
+
+# Credits
+
+Data Science: [Kathryn Bonnen](github.com/kbonnen)
+Developer: [Conrad Stoll](github.com/cnstoll)
+Icon Design: [Ryan Considine](twitter.com/ryanconsidine)
