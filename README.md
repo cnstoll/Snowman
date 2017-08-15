@@ -20,6 +20,6 @@ Snowman was built to demonstrate using CoreML to build a game for watchOS 4. The
 
 # Credits
 
-Data Science: [Kathryn Bonnen](github.com/kbonnen)
-Developer: [Conrad Stoll](github.com/cnstoll)
-Icon Design: [Ryan Considine](twitter.com/ryanconsidine)
+- Data Science: [Kathryn Bonnen](https://github.com/kbonnen)
+- Developer: [Conrad Stoll](https://github.com/cnstoll)
+- Icon Design: [Ryan Considine](https://twitter.com/ryanconsidine)
