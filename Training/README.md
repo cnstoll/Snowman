@@ -2,8 +2,7 @@
 
 https://www.nist.gov/itl/iad/image-group/emnist-dataset
 
-- Download the Matlab Format Dataset [here](http://www.itl.nist.gov/iaui/vip/cs_links/EMNIST/matlab.zip)
-- Move the dataset .mat file into the directory location
+- Follow the directions in the /Dataset directory to download the correct dataset
 
 # Python Tools to Install
 
