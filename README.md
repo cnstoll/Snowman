@@ -2,6 +2,10 @@
 
 Snowman is a simple Apple Watch game. The objective is to draw letters to guess the word or phrase before the snowman melts.
 
+<p align="center">
+<img src="Resources/snowman-screenshots.png") alt="Snowman for Apple Watch"/>
+</p>
+
 ## Purpose
 
 Snowman was built to demonstrate using CoreML to build a game for watchOS 4. The project includes an Apple Watch app and several scripts to train handwriting recognition models that are compatible with CoreML.
