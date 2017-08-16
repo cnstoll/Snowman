@@ -18,7 +18,11 @@ Snowman was built to demonstrate using CoreML to build a game for watchOS 4. The
 ## Machine Learning
 
 - Snowman uses a handwriting recognition model trained on the Extended MNIST data set. 
-- For more information on training a handwriting recognition model, read the README and scripts located in the Training folder.
+- For more information on training a handwriting recognition model, check out the README and scripts located in the Training folder.
+
+## Known Issues
+
+- SpriteKit doesn't load initially for interface controllers on watchOS 4 Beta 5. To resolve, background the app when the spinner appears and then re-open it and the interface controller will load. (Fixed in Beta 6)
 
 # Credits
 
