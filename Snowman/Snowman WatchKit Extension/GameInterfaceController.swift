@@ -1,6 +1,6 @@
 //
 //  InterfaceController.swift
-//  Test WatchKit Extension
+//  Snowman WatchKit Extension
 //
 //  Created by Conrad Stoll on 6/11/17.
 //  Copyright © 2017 Conrad Stoll. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  Game.swift
-//  Test WatchKit Extension
+//  Snowman WatchKit Extension
 //
 //  Created by Conrad Stoll on 7/6/17.
 //  Copyright © 2017 Conrad Stoll. All rights reserved.
