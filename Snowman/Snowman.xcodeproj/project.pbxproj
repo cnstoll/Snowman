@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		55242E211F2C23EC00F9ED6A /* letters_keras_half_1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E201F2C23DA00F9ED6A /* letters_keras_half_1.mlmodel */; };
-		55242E221F2C23ED00F9ED6A /* letters_keras_half_1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E201F2C23DA00F9ED6A /* letters_keras_half_1.mlmodel */; };
 		55242E241F2C27AA00F9ED6A /* letters_keras_half_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E231F2C269D00F9ED6A /* letters_keras_half_2.mlmodel */; };
-		55242E251F2C27AC00F9ED6A /* letters_keras_half_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E231F2C269D00F9ED6A /* letters_keras_half_2.mlmodel */; };
 		55242E271F2C27D200F9ED6A /* KerasFullModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55242E261F2C27D200F9ED6A /* KerasFullModels.swift */; };
 		55242E281F2C27D200F9ED6A /* KerasFullModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55242E261F2C27D200F9ED6A /* KerasFullModels.swift */; };
 		55242E2D1F2C362800F9ED6A /* letters_keras.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E2C1F2C362500F9ED6A /* letters_keras.mlmodel */; };
@@ -567,10 +565,8 @@
 				55D203551F29A1ED003B4308 /* LetterDrawing.swift in Sources */,
 				55D203261F2984DA003B4308 /* Game.swift in Sources */,
 				55D2030E1F298463003B4308 /* ExtensionDelegate.swift in Sources */,
-				55242E251F2C27AC00F9ED6A /* letters_keras_half_2.mlmodel in Sources */,
 				55D203501F29A1D4003B4308 /* KerasLetterRecognizer.swift in Sources */,
 				55D203281F2984DA003B4308 /* GameInterfaceController.swift in Sources */,
-				55242E221F2C23ED00F9ED6A /* letters_keras_half_1.mlmodel in Sources */,
 				55D203101F298463003B4308 /* ComplicationController.swift in Sources */,
 				55242E2E1F2C362900F9ED6A /* letters_keras.mlmodel in Sources */,
 			);
