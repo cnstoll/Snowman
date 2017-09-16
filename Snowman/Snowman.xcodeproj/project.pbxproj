@@ -67,6 +67,7 @@
 		559EF9A31F3AB60800DFAA9A /* letters_pca.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 559EF9A11F3AB2F900DFAA9A /* letters_pca.mlmodel */; };
 		559EF9A61F3ABD4F00DFAA9A /* letters_pca_half_1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 559EF9A51F3ABD4C00DFAA9A /* letters_pca_half_1.mlmodel */; };
 		559EF9A71F3ABD5200DFAA9A /* letters_pca_half_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 559EF9A41F3ABD4C00DFAA9A /* letters_pca_half_2.mlmodel */; };
+		55CF7C2C1F6CA65E00654DE2 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55CF7C2B1F6CA65E00654DE2 /* AboutViewController.swift */; };
 		55D202E91F298463003B4308 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D202E81F298463003B4308 /* AppDelegate.swift */; };
 		55D202EB1F298463003B4308 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55D202EA1F298463003B4308 /* ViewController.swift */; };
 		55D202EE1F298463003B4308 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55D202EC1F298463003B4308 /* Main.storyboard */; };
@@ -168,6 +169,7 @@
 		559EF9A11F3AB2F900DFAA9A /* letters_pca.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = letters_pca.mlmodel; sourceTree = "<group>"; };
 		559EF9A41F3ABD4C00DFAA9A /* letters_pca_half_2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = letters_pca_half_2.mlmodel; sourceTree = "<group>"; };
 		559EF9A51F3ABD4C00DFAA9A /* letters_pca_half_1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = letters_pca_half_1.mlmodel; sourceTree = "<group>"; };
+		55CF7C2B1F6CA65E00654DE2 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		55D202E51F298463003B4308 /* Snowman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Snowman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D202E81F298463003B4308 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55D202EA1F298463003B4308 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				55D202E81F298463003B4308 /* AppDelegate.swift */,
+				55CF7C2B1F6CA65E00654DE2 /* AboutViewController.swift */,
 				553305D91F2E7CB6005166F4 /* CoreMLPlaygroundViewController.swift */,
 				55D202EA1F298463003B4308 /* ViewController.swift */,
 				55D202EC1F298463003B4308 /* Main.storyboard */,
@@ -547,6 +550,7 @@
 				55242E271F2C27D200F9ED6A /* KerasFullModels.swift in Sources */,
 				553305CB1F2E74D2005166F4 /* Endian.swift in Sources */,
 				553305CA1F2E74D2005166F4 /* CSVWriter.swift in Sources */,
+				55CF7C2C1F6CA65E00654DE2 /* AboutViewController.swift in Sources */,
 				559EF9A31F3AB60800DFAA9A /* letters_pca.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
