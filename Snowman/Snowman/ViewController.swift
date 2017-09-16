@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTapShareButton() {
-        let shareString = "Check out Snowman, the new game I'm playing on my Apple Watch\nhttps://itunes.apple.com/app/id1195676848"
+        let shareString = "Check out Snowman, the new game I'm playing on my Apple Watch\nhttps://itunes.apple.com/app/id1278532747"
         
         let activityViewController = UIActivityViewController(activityItems: [shareString], applicationActivities: [])
         present(activityViewController, animated: true, completion: nil)
