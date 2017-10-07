@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -83,7 +83,7 @@ Watch to play.</string>
                             <constraint firstItem="HdL-fu-bzo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rna-mL-8aL"/>
                             <constraint firstItem="ptn-Q8-STv" firstAttribute="trailing" secondItem="Uee-0j-aNJ" secondAttribute="trailing" id="tky-al-dVa"/>
                             <constraint firstItem="HdL-fu-bzo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.5" id="v5r-Qn-oex"/>
-                            <constraint firstItem="ptn-Q8-STv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" id="yoP-vX-CyQ"/>
+                            <constraint firstItem="ptn-Q8-STv" firstAttribute="top" secondItem="Uee-0j-aNJ" secondAttribute="top" id="yoP-vX-CyQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Uee-0j-aNJ"/>
                     </view>
@@ -257,7 +257,7 @@ https://github.com/cnstoll/Snowman</string>
                             <constraint firstItem="2wm-h8-VVZ" firstAttribute="top" secondItem="flU-nJ-32J" secondAttribute="bottom" constant="16" id="nye-El-yAO"/>
                             <constraint firstItem="Vua-ae-H9c" firstAttribute="leading" secondItem="Z7I-Mv-OuU" secondAttribute="leading" id="uHb-HR-7cG"/>
                             <constraint firstItem="flU-nJ-32J" firstAttribute="leading" secondItem="Z7I-Mv-OuU" secondAttribute="leading" constant="16" id="wTq-bA-2a1"/>
-                            <constraint firstItem="Vua-ae-H9c" firstAttribute="top" secondItem="5rt-cG-6jA" secondAttribute="top" constant="20" id="yP5-yc-Npg"/>
+                            <constraint firstItem="Vua-ae-H9c" firstAttribute="top" secondItem="Z7I-Mv-OuU" secondAttribute="top" id="yP5-yc-Npg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Z7I-Mv-OuU"/>
                     </view>
