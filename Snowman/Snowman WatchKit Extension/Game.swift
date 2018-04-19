@@ -43,13 +43,13 @@ struct Game {
     }
     
     private func equivalent(_ character : Character, comparison : String) -> Bool {
-        guard let guessedCharacter = comparison.lowercased().characters.first else {
+        guard let guessedCharacter = comparison.lowercased().first else {
             return false
         }
         
         let string = String(character)
         
-        guard let existingCharacter = string.lowercased().characters.first else {
+        guard let existingCharacter = string.lowercased().first else {
             return false
         }
         
@@ -67,7 +67,7 @@ struct Game {
     mutating func evaluate(_ letter : String) -> Bool {
         var correctGuess = false
         
-        for character in word.characters {
+        for character in word {
             if equivalent(character, comparison: letter) {
                 correctGuess = true
                 break;
@@ -126,7 +126,7 @@ struct Game {
         
         var gameWon = true
         
-        for character in word.characters {
+        for character in word {
             if character == " " {
                 phrase += " "
             } else if character == "-" {
