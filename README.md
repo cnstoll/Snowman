@@ -13,7 +13,7 @@ Snowman was built to demonstrate using CoreML to build a game for watchOS 4. The
 ## Presentation
 
 - Snowman was built as a companion app to demonstrate new watchOS 4 features, and as an example of how to use CoreML on watchOS. 
-- The presentation that describes how Snowman was built and many other capabilities of watchOS 4 can be found [here](https://speakerdeck.com/cnstoll/the-latest-in-developing-for-watchos).
+- The presentation that describes how Snowman was built and many other capabilities of watchOS 4 can be found [here](https://speakerdeck.com/cnstoll/the-latest-in-developing-for-watchos) and [here](https://speakerdeck.com/cnstoll/machine-learning-on-apple-watch).
 
 ## Building Snowman
 
