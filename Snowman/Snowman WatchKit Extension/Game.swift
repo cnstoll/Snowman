@@ -29,6 +29,7 @@ enum GameState {
 
 struct Game {
     let word : String
+    let definition : String?
     
     var allGuesses : Set<String> = Set<String>()
     var correct : Set<String> = Set<String>()
@@ -38,8 +39,9 @@ struct Game {
     var won : Bool = false
     var over : Bool = false
     
-    init(word : String) {
+    init(word : String, definition : String?) {
         self.word = word
+        self.definition = definition
     }
     
     private func equivalent(_ character : Character, comparison : String) -> Bool {
@@ -142,6 +144,12 @@ struct Game {
                         revealed = true
                         break
                     }
+                }
+                
+                if correct.count == 0, shouldRevealPhrase, revealed == false {
+                    phrase += String(character)
+                    revealed = true
+                    gameWon = false
                 }
                 
                 if revealed == false {

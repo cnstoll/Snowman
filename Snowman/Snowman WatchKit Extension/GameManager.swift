@@ -20,6 +20,10 @@
 import Foundation
 import WatchKit
 
+struct Definitions : Codable {
+    var dictionary : [String : String] = [String : String]()
+}
+
 struct GameMode {
     let title : String
     let phrases : [String]
@@ -28,10 +32,32 @@ struct GameMode {
 class GameManager {
     static let shared = GameManager()
     
+    let definitions : Definitions?
     let modes = [common, fruits, harryPotter, shakespeare, spelling]
     
     init() {
+        self.definitions = GameManager.loadDefinitions()
+    }
+    
+    func definition(for word: String) -> String? {
+        if let definitions = definitions, let definition = definitions.dictionary[word] {
+            return definition
+        }
         
+        return nil
+    }
+    
+    static func loadDefinitions() -> Definitions? {
+        let decoder = JSONDecoder()
+        
+        if let path = Bundle.main.path(forResource: "Definitions", ofType: "json"),
+            let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
+            let definitions = try? decoder.decode(Definitions.self, from: data) {
+            
+            return definitions
+        }
+        
+        return nil
     }
     
     static func loadFile(named name: String, extension fileExtension: String, seperatedBy seperator: String) -> [String] {

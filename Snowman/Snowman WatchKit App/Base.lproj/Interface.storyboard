@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13168.3" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dDL-Tu-zFX">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14460.31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dDL-Tu-zFX">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13042.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14460.16"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="SFMono-Regular.otf">
@@ -46,15 +46,15 @@
         <!--Game-->
         <scene sceneID="Cqe-oh-cTp">
             <objects>
-                <controller identifier="GameInterfaceController" title="Game" id="Yqe-nX-Yag" customClass="GameInterfaceController" customModule="Snowman_WatchKit_Extension">
+                <controller identifier="GameInterfaceController" title="Game" fullBounds="YES" id="Yqe-nX-Yag" customClass="GameInterfaceController" customModule="Snowman_WatchKit_Extension">
                     <items>
-                        <group width="154" height="174" alignment="center" layout="overlap" spacing="0.0" id="F09-q9-dh2">
+                        <group width="154" height="174" alignment="center" layout="overlap" radius="0.0" spacing="0.0" id="F09-q9-dh2">
                             <items>
-                                <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" spacing="0.0" id="tB5-xD-arG">
+                                <group width="1" height="1" alignment="center" verticalAlignment="center" layout="vertical" radius="0.0" spacing="0.0" id="tB5-xD-arG">
                                     <items>
-                                        <group width="1" height="0.5" alignment="center" layout="overlap" spacing="0.0" id="0o0-Gs-OUf" userLabel="Progress Group">
+                                        <group width="1" height="0.5" alignment="center" layout="overlap" radius="0.0" spacing="0.0" id="0o0-Gs-OUf" userLabel="Progress Group">
                                             <items>
-                                                <group width="1" height="1" alignment="left" layout="overlap" spacing="0.0" id="fI4-5X-MdK">
+                                                <group width="1" height="1" alignment="left" layout="overlap" radius="0.0" spacing="0.0" id="fI4-5X-MdK">
                                                     <items>
                                                         <imageView width="125" height="86" alignment="center" verticalAlignment="bottom" image="snowman" contentMode="center" id="Bna-C9-XvO"/>
                                                         <label alignment="left" hidden="YES" text="🎉" id="BMf-jM-xe8">
@@ -63,6 +63,11 @@
                                                         <label alignment="left" hidden="YES" text="😞" id="LTD-9K-Qh4">
                                                             <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="20"/>
                                                         </label>
+                                                        <button width="22" height="22" alignment="right" backgroundImage="dictionary" id="Qlg-bs-GJ7">
+                                                            <connections>
+                                                                <action selector="didTapDefinitionButton" destination="Yqe-nX-Yag" id="re1-i4-84e"/>
+                                                            </connections>
+                                                        </button>
                                                         <label alignment="left" text="DGI" id="I2U-lK-KD8">
                                                             <color key="textColor" red="0.85882352941176465" green="0.25490196078431371" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <fontDescription key="font" name="SFMono-Regular" family="SF Mono" pointSize="16"/>
@@ -182,6 +187,8 @@
                                 </tapGestureRecognizer>
                             </gestureRecognizers>
                             <variation key="device=watch38mm" height="150" width="134"/>
+                            <variation key="device=watch40mm" height="168" width="150"/>
+                            <variation key="device=watch44mm" height="192" width="170"/>
                         </group>
                     </items>
                     <menu key="menu" id="ZZ0-J3-h0G">
@@ -197,6 +204,7 @@
                         <outlet property="animationGuessingPhrase" destination="OoQ-MQ-MOn" id="1NV-wZ-8dI"/>
                         <outlet property="animationMissedGuesses" destination="pH9-Ne-uST" id="7aN-r9-W6d"/>
                         <outlet property="confirmGroup" destination="hpE-Lx-gw0" id="elE-2H-Bia"/>
+                        <outlet property="definitionButton" destination="Qlg-bs-GJ7" id="aJP-9L-iV7"/>
                         <outlet property="drawGroup" destination="blO-xh-YFS" id="6gA-6W-qat"/>
                         <outlet property="drawScene" destination="uqb-Du-xSF" id="kin-kd-Pjx"/>
                         <outlet property="drawingOverlayGroup" destination="d73-QT-40V" id="G9X-Oi-zwa"/>
@@ -219,6 +227,20 @@
                 </controller>
             </objects>
             <point key="canvasLocation" x="464" y="604"/>
+        </scene>
+        <!--DefinitionInterfaceController-->
+        <scene sceneID="0bK-W5-MyF">
+            <objects>
+                <controller identifier="DefinitionInterfaceController" id="bcr-Zl-BcJ" customClass="DefinitionInterfaceController" customModule="Snowman_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Label" textAlignment="left" numberOfLines="0" id="Rzm-T2-afU"/>
+                    </items>
+                    <connections>
+                        <outlet property="label" destination="Rzm-T2-afU" id="6E1-8i-1gS"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="714" y="604"/>
         </scene>
     </scenes>
     <color key="tintColor" red="0.96078431372549022" green="0.65098039215686276" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
