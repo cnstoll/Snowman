@@ -199,7 +199,7 @@ struct Game {
     }
     
     private func kerningAttributed(for string : String) -> NSAttributedString {
-        let attributedString = NSAttributedString(string: string, attributes: [NSAttributedStringKey.kern : NSNumber(value: 2), NSAttributedStringKey.ligature : NSNumber(value: 0)])
+        let attributedString = NSAttributedString(string: string, attributes: [NSAttributedString.Key.kern : NSNumber(value: 2), NSAttributedString.Key.ligature : NSNumber(value: 0)])
         return attributedString
     }
 }
