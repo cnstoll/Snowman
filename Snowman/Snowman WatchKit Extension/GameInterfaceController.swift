@@ -48,6 +48,8 @@ class GameInterfaceController: WKInterfaceController {
     @IBOutlet weak var finalPhrase : WKInterfaceLabel!
     @IBOutlet weak var retryButton : WKInterfaceButton!
     
+    @IBOutlet weak var definitionButton : WKInterfaceButton!
+
     @IBOutlet weak var firstConfirmButton : WKInterfaceButton!
     @IBOutlet weak var secondConfirmButton : WKInterfaceButton!
     
@@ -59,7 +61,7 @@ class GameInterfaceController: WKInterfaceController {
     var letterSelection : String = ""
     var letterPredictions : [LetterPrediction]?
 
-    var game = Game(word: "")
+    var game = Game(word: "", definition: nil)
     var drawing : LetterDrawing?
     var state : GameState = .game(animated: false, phraseAnimated: false)
     var lineNode : SKShapeNode?
@@ -70,10 +72,10 @@ class GameInterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         
         configureUI(for: .intro)
-        
+                
         if let phrase = context as? String {
             introGroup.setHidden(false)
-            game = Game(word: phrase)
+            game = Game(word: phrase, definition: GameManager.shared.definition(for: phrase))
             configureUI(for: state)
         }
     }
@@ -152,10 +154,15 @@ class GameInterfaceController: WKInterfaceController {
             finalPhrase.setAttributedText(latestPhrase)
             
             if game.over {
+                if game.definition != nil {
+                    definitionButton.setHidden(false)
+                }
+                
                 missedGuesses.setHidden(true)
                 playAgainGroup.setHidden(false)
                 phraseGroup.setHidden(true)
             } else {
+                definitionButton.setHidden(true)
                 missedGuesses.setHidden(false)
                 playAgainGroup.setHidden(true)
                 phraseGroup.setHidden(false)
@@ -212,6 +219,12 @@ class GameInterfaceController: WKInterfaceController {
     
     
     // MARK: Action Methods
+    
+    @IBAction func didTapDefinitionButton() {
+        let context = game.definition
+        
+        presentController(withName: "DefinitionInterfaceController", context: context)
+    }
     
     @IBAction func didTapRetry() {
         state = .game(animated: false, phraseAnimated: false)
@@ -316,11 +329,9 @@ class GameInterfaceController: WKInterfaceController {
     }
     
     func startDrawing() {
-        let size = CGSize(width: 154.0, height: 174.0)
+        let size = WKInterfaceDevice.drawingSize()
         let strokeWidth : CGFloat = 8.0
-        
-        // Todo: Different canvas sizes for 38mm
-        
+                
         drawing = LetterImageDrawing()
         drawing?.drawingWidth = size.width
         drawing?.drawingHeight = size.height

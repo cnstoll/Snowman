@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26E11CAE21DD618A005D693A /* Definitions.json in Resources */ = {isa = PBXBuildFile; fileRef = 26E11CAD21DD618A005D693A /* Definitions.json */; };
+		26E11CB021DD6640005D693A /* DefinitionInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E11CAF21DD6640005D693A /* DefinitionInterfaceController.swift */; };
+		26E11CB221DD7210005D693A /* WKInterfaceDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26E11CB121DD7210005D693A /* WKInterfaceDevice+Extensions.swift */; };
 		55242E211F2C23EC00F9ED6A /* letters_keras_half_1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E201F2C23DA00F9ED6A /* letters_keras_half_1.mlmodel */; };
 		55242E241F2C27AA00F9ED6A /* letters_keras_half_2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 55242E231F2C269D00F9ED6A /* letters_keras_half_2.mlmodel */; };
 		55242E271F2C27D200F9ED6A /* KerasFullModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55242E261F2C27D200F9ED6A /* KerasFullModels.swift */; };
@@ -135,6 +138,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		26E11CAD21DD618A005D693A /* Definitions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Definitions.json; sourceTree = "<group>"; };
+		26E11CAF21DD6640005D693A /* DefinitionInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionInterfaceController.swift; sourceTree = "<group>"; };
+		26E11CB121DD7210005D693A /* WKInterfaceDevice+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKInterfaceDevice+Extensions.swift"; sourceTree = "<group>"; };
 		55242E201F2C23DA00F9ED6A /* letters_keras_half_1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = letters_keras_half_1.mlmodel; sourceTree = "<group>"; };
 		55242E231F2C269D00F9ED6A /* letters_keras_half_2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = letters_keras_half_2.mlmodel; sourceTree = "<group>"; };
 		55242E261F2C27D200F9ED6A /* KerasFullModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KerasFullModels.swift; sourceTree = "<group>"; };
@@ -306,11 +312,14 @@
 			isa = PBXGroup;
 			children = (
 				55D2030F1F298463003B4308 /* ComplicationController.swift */,
+				26E11CAF21DD6640005D693A /* DefinitionInterfaceController.swift */,
+				26E11CAD21DD618A005D693A /* Definitions.json */,
 				55D2030D1F298463003B4308 /* ExtensionDelegate.swift */,
 				55D203221F2984D9003B4308 /* Game.swift */,
 				55D203241F2984D9003B4308 /* GameInterfaceController.swift */,
 				55D203231F2984D9003B4308 /* GameManager.swift */,
 				55D203211F2984D9003B4308 /* GameModeInterfaceController.swift */,
+				26E11CB121DD7210005D693A /* WKInterfaceDevice+Extensions.swift */,
 				55D203131F298463003B4308 /* Info.plist */,
 				55D203111F298463003B4308 /* Assets.xcassets */,
 			);
@@ -418,17 +427,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0900;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Conrad Stoll";
 				TargetAttributes = {
 					55D202E41F298463003B4308 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1010;
 					};
 					55D202F61F298463003B4308 = {
 						CreatedOnToolsVersion = 9.0;
 					};
 					55D203051F298463003B4308 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -511,6 +522,7 @@
 				55242E3E1F2CF4E700F9ED6A /* SFMono-Bold.otf in Resources */,
 				55D203121F298463003B4308 /* Assets.xcassets in Resources */,
 				55242E5E1F2CF4EC00F9ED6A /* SFMono-Semibold.otf in Resources */,
+				26E11CAE21DD618A005D693A /* Definitions.json in Resources */,
 				55242E551F2CF4EC00F9ED6A /* SFMono-BoldItalic.otf in Resources */,
 				55242E591F2CF4EC00F9ED6A /* SFMono-LightItalic.otf in Resources */,
 				55242E561F2CF4EC00F9ED6A /* SFMono-Heavy.otf in Resources */,
@@ -557,10 +569,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26E11CB021DD6640005D693A /* DefinitionInterfaceController.swift in Sources */,
 				55242E281F2C27D200F9ED6A /* KerasFullModels.swift in Sources */,
 				55D203531F29A1D9003B4308 /* LetterRecognizing.swift in Sources */,
 				55D203571F29A1F2003B4308 /* LetterImageDrawing.swift in Sources */,
 				55D203251F2984DA003B4308 /* GameModeInterfaceController.swift in Sources */,
+				26E11CB221DD7210005D693A /* WKInterfaceDevice+Extensions.swift in Sources */,
 				55D203271F2984DA003B4308 /* GameManager.swift in Sources */,
 				55D203551F29A1ED003B4308 /* LetterDrawing.swift in Sources */,
 				55D203261F2984DA003B4308 /* Game.swift in Sources */,
@@ -629,6 +643,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -636,6 +651,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -686,6 +702,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -693,6 +710,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -733,7 +751,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
@@ -750,7 +768,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
@@ -801,7 +819,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conradstoll.Snowman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -815,7 +833,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.conradstoll.Snowman;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
