@@ -15,7 +15,7 @@ class DefinitionInterfaceController : WKInterfaceController {
     
     override func awake(withContext context: Any?) {
         if let text = context as? String {
-            label.setText(text)
+            label.setText("\n\(text)")
         }
         
         setTitle("Done")
